@@ -37,3 +37,8 @@ The following assumptions are made about your environment:
 # Django
 - Deploy the code from this repository with your method of choice to `demo-django`
 - Open a ssh sessiomn to `demo-django` and create a superuser by executing `python manage.py createsuperuser`
+
+# Support
+If you want professional support with this or other Django related issues, like integrating GitLab CICD with CapRover and DigitalOcean feel free to contact us.
+
+support@kamner.de
