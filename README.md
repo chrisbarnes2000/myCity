@@ -1,9 +1,9 @@
-# demo-django
-A simple, more or less production ready, django skelleton for deployment with caprover.
+# CapRover Django
+A simple, more or less production ready, [Django](https://www.djangoproject.com/) template for deployment with [CapRover](https://caprover.com/).
 
 __Disclaimer:__ This is based on our experience with CapRover and Django, it is provided as is - without any warranty!
 
-If you find any bugs or have suggestions to better the demo app please feel free to open a issue.
+If you find any bugs or have suggestions to better this template please feel free to open a issue or submit a merge request.
 
 # Setup
 During the setup we will refer to the django app as `demo-django` and the prostgre app as `demo-db`.
@@ -39,6 +39,4 @@ The following assumptions are made about your environment:
 - Open a ssh sessiomn to `demo-django` and create a superuser by executing `python manage.py createsuperuser`
 
 # Support
-If you want professional support with this or other Django related issues, like integrating GitLab CICD with CapRover and DigitalOcean feel free to contact us.
-
-support@kamner.de
+If you want professional support with this or other Django related issues, like integrating GitLab CICD with CapRover and DigitalOcean feel free to [contact us](https://kamner.de/contact).
