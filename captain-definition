@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 2,
+  "dockerfileLines": [
+    "FROM library/python:3.6.3-alpine",
+    "RUN apk update && apk upgrade && apk add --no-cache make g++ bash git openssh postgresql-dev curl",
+    "RUN mkdir -p /usr/src/app",
+    "WORKDIR /usr/src/app",
+    "COPY ./django_project/ /usr/src/app",
+    "COPY ./utils/ /usr/src/utils",
+    "EXPOSE 80",
+    "CMD sh /usr/src/utils/run.sh"
+  ]
+}
