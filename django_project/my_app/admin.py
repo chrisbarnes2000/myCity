@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import SampleModel
+
+
+@admin.register(SampleModel)
+class SampleModelAdmin(admin.ModelAdmin):
+    pass
