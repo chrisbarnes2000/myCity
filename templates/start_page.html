@@ -1,0 +1,13 @@
+<!-- templates/satart.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="game_display row">
+    <div class="col-4"></div>
+    <div class="col-4 mt-5">
+        <a href="{{ url_for('gameplay')}}"><button type="button" class="btn btn-secondary mt-5">New Game</button></a>
+        <a href="{{ url_for('loadgame')}}"><button type="button" class="btn btn-secondary">Load Game</button></a>
+    </div>
+    <div class="col-4"></div>
+</div>
+{% endblock %}

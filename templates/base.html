@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dungeon Heroes</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel='stylesheet' href=https://bootswatch.com/4/solar/bootstrap.min.css>
+    <link rel="stylesheet" href="/static/styles.css?ver=48">
+</head>
+<body>
+    <div class='container'>
+        <div class="jumbotron text-center mt-3 mb-4 p-2">
+            <a href="{{ url_for('start')}}"><h1 class="jumbotron_header display-3">Dungeon Heroes</h1></a>
+            <a href="{{ url_for('save')}}"><img src="static/images/save.png" alt="Save button" width="50"
+                    height="50" style="margin-left: 7em; margin-bottom: 1em;"></a>
+        </div>
+        {% block content %}
+            BODY CONTENT GOES HERE
+        {% endblock %}
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</body>
+</html>

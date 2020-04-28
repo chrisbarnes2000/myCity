@@ -1,0 +1,153 @@
+.jumbotron_header { 
+    text-shadow: 3px 5px 4px limegreen;
+    font-family:  cursive;
+    display: inline;
+    color: black;
+}
+
+.game_display {
+    background-color: lightgray;
+    border: 5px solid red;
+    text-align: center;
+    height: 450px;
+    padding: 1em;
+}
+
+.game_display p {
+    font-family: cursive;
+    font-size: xx-large;
+    margin-top: 6em;
+    color: black;
+}
+
+.inventory_header {
+    display: inline;
+    font-family:  cursive;
+    color: black;
+    text-shadow: 3px 5px 4px #F78817;
+}
+
+.inventory_display{
+    background-color: lightgray;
+    border: 5px solid red;
+    text-align: center;
+    padding-left: 5em;
+    padding-right: 5em;
+    height: 550px;
+}
+
+.btn-secondary {
+    margin: 0.5em auto 1em;
+    width: 10em;
+    height: 4em;
+    font-size: larger;
+}
+
+.btn-success {
+    margin: 0.5em auto 5em;
+    background: radial-gradient(#6DD400, #0C5F04);
+    width: 10em;
+    height: 10em;
+}
+
+.btn-info {
+    margin: 0.5em auto 0.5em;
+    width: 5em;
+    height: 5em;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.left {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-left: auto;
+}
+
+.left:after {
+  content: '';
+	display: inline-block;
+  margin-top: 1.05em;
+  margin-left: 0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.top {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.top:after {
+  content: '';
+	display: inline-block;
+  margin-top: 1.4em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.bottom {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.bottom:after {
+  content: '';
+	display: inline-block;
+  margin-top: 0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.right {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: 8px;
+}
+
+.right:after {
+  content: '';
+	display: inline-block;
+  margin-top: 1.05em;
+  margin-left: -0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

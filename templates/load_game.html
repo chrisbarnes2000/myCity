@@ -1,0 +1,22 @@
+<!-- templates/inventory.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="inventory_display">
+    <h1 class="inventory_header">Load Game</h1>
+    <div class="row">
+        <button type="button" class="btn btn-success">Save 1</button>
+        <button type="button" class="btn btn-success">Save 2</button>
+        <button type="button" class="btn btn-success">Save 3</button>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-success">Save 4</button>
+        <button type="button" class="btn btn-success">Save 5</button>
+        <button type="button" class="btn btn-success">Save 6</button>
+    </div>
+
+    <div class="controls row mt-3">
+        <div class="col"><a href="{{ url_for('gameplay')}}"><button type="button" class="btn btn-secondary">Load Game</button></a></div>
+    </div>
+
+{% endblock %}
