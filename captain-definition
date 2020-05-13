@@ -1,11 +1,4 @@
 {
     "schemaVersion": 2,
-    "dockerfileLines" :[
-        "FROM python:3.7.0-alpine",
-        "ADD . /app",
-        "WORKDIR /app",
-        "RUN pip3 install -r requirements.txt",
-        "CMD [ \"python3\", \"app.py\" ]",
-        "EXPOSE 5000 27017"
-    ]
+    "dockerfilePath": "./Dockerfile"
 }
