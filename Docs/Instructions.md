@@ -45,7 +45,13 @@ $ docker-compose down
 
 2. Edit Stuff and Test locally
 
-3. add, commit, & Push to that branch 
+3. add, commit, & Push to that branch
+
+    Use tags when committing ```ga .;gcmsg "[function] description"```
+    * [update]  description or file being modified
+    * [add]     description or file being modified
+    * [remove]  description or file being modified
+    * [fix]     description or file being modified
     ```sh
     $ git push origin FrontEnd/Development/Fixes
     ```

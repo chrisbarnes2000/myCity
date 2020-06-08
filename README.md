@@ -10,8 +10,7 @@
 
 **Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
 
-## [PROJECT PROPOSAL](Docs/Proposal.md)
-## [PROJECT SCORING](Docs/Rubric-Scoring.md)
+## [PROJECT PROPOSAL](Docs/Proposal.md)     &       [PROJECT SCORING](Docs/Rubric-Scoring.md)
 <!-- ## [TDD APPROACH](Docs/tdd.md) -->
 
 <!-- ![image](/staticfiles/img/README.jpeg) -->
