@@ -48,6 +48,7 @@ $ docker-compose down
 3. add, commit, & Push to that branch
 
     Use tags when committing ```ga .;gcmsg "[function] description"```
+    * [pull]    Who made last change and your addition
     * [update]  description or file being modified
     * [add]     description or file being modified
     * [remove]  description or file being modified
