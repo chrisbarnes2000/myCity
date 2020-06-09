@@ -23,3 +23,22 @@ def image_upload(request):
             "image_url": image_url, "all": all_photos
         })
     return render(request, "upload.html", {"all": all_photos})
+
+
+def resources(request):
+    return render(request, "resources.html", {})
+
+def benifits(request):
+    return render(request, "benifits.html", {})
+
+def pandemic_info(request):
+    pass
+
+def shelter_info(request):
+    pass
+
+def food_locations(request):
+    pass
+
+def legal_help(request):
+    pass
