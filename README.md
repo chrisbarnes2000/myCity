@@ -8,7 +8,12 @@
 
 ## Description
 
-**Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
+**Over all, myCity is an educational app that keeps you informed of:**
+
+- **Your legal rights & local laws**: (providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained)
+- **Available support resources:**   (govt agencies, non-profits, and local businesses that help with things such as
+    - medical info, addiction recovery resources, access to food, housing, etc)
+- Later we plan to allow for **Instantly submitting and track benefits** applications via mobile app and mobile/user-friendly website. (It’s the get calfresh for all benefits.)
 
 ## [PROJECT PROPOSAL](Docs/Proposal.md)     &       [PROJECT SCORING](Docs/Rubric-Scoring.md)
 <!-- ## [TDD APPROACH](Docs/tdd.md) -->

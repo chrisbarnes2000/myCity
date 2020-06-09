@@ -7,19 +7,14 @@ Then clone and modify these files
 ```sh
 $ git clone https://github.com/ChrisBarnes7404/Repo-Name.git
 ```
+Look for these files to change
+
+![image](static/img/docs/look-for-me.jpeg)
 
 1. Rename `*.env.dev-sample*` to `*.env.development*`.
-2. Update the environment variables (ask team lead for new values) in the `*docker-compose.yml*` and `*.env.dev* files`.
-3. Build the images and run the containers:
-
-Command Short Cuts used below
-| Description               | Short Cut |       Regular       |
-| ------------------------- | --------- | ------------------- |
-| Add all changes           |  ga .     | git add .           |
-| checkout branch           |  gco      | git checkout        |
-| checkout master branch    |  gcm      | git checkout master |
-| merge changes to master   |  gm       | git merge Branch    |
-| push to origin            |  gp       | git push            |
+2. Update the environment variables (ask team lead for new values) in the `*docker-compose.yml*` and `*.env.development* files`.
+3. Add a folder titled `mediafiles` to the `apps` directory
+4. Build the images and run the containers:
 
 
 # Development
@@ -35,6 +30,16 @@ Test it out at [http://localhost:8000](http://localhost:8000). The "app" folder 
 ```sh
 $ docker-compose down
 ```
+
+Command Short Cuts used below
+| Description               | Short Cut |       Regular       |
+| ------------------------- | --------- | ------------------- |
+| Add all changes           |  ga .     | git add .           |
+| checkout branch           |  gco      | git checkout        |
+| checkout master branch    |  gcm      | git checkout master |
+| merge changes to master   |  gm       | git merge Branch    |
+| push to origin            |  gp       | git push            |
+
 
 # Branching
 
@@ -73,7 +78,7 @@ $ docker-compose down
 Repeat branching and update your team and progress tracker
 
 
-<!-- # Production
+# Production
 
 Uses gunicorn + nginx.
 
@@ -89,6 +94,6 @@ Uses gunicorn + nginx.
 ### Stop The Server
 ```sh
 $ docker-compose down
-``` -->
+```
 
 ## Other Docker [Commands](Docs/Docker-comands.md)

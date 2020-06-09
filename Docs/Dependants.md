@@ -1,6 +1,7 @@
 # Dependants
 
 Originally based on this [post](https://testdriven.io/dockerizing-django-with-postgres-gunicorn-and-nginx).
+and this Production ready Docker + Django + Bootstrap 4 starter pack. [project repo](https://github.com/ChrisBarnes7404/django-on-docker)
 
 ## 📂 Project Files
 

@@ -3,8 +3,12 @@
 
 ## Description
 
-**Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
+**Over all, myCity is an educational app that keeps you informed of:**
 
+- **Your legal rights & local laws**: (providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained)
+- **Available support resources:**   (govt agencies, non-profits, and local businesses that help with things such as
+    - medical info, addiction recovery resources, access to food, housing, etc)
+- Later we plan to allow for **Instantly submitting and track benefits** applications via mobile app and mobile/user-friendly website. (It’s the get calfresh for all benefits.)
 
 <hr>
 
@@ -30,27 +34,27 @@
 
 **ONE SINGLE aspect of product. Consider: build backend or front end, CRUD one resource, use API or library, authentication etc.**
 
-- **Phase 1**: Proposal - **Due Date DW, DD,Moth,Year**
+- **Phase 1**: Proposal - **Due Date Friday 12, June**
     * **Deliverables**:
-        * 
-        * 
-- **Phase 2**: PHASE_NAME - **Due Date DW, DD,Moth,Year**
+        * Set-up Environments	
+        * Design a Logo and layout by constructing wireframes for the Front-end Styles
+- **Phase 2**: Outreach - **Due Date Firday 19, June**
     * **Deliverables**:
-        *
-        *
-- **Phase 2**: PHASE_NAME - **Due Date DW, DD,Moth,Year**
+        * Conduct User Interviews and wireframe tests
+        * Fill out Documentation (user journey, interview)
+- **Phase 3**: Research - **Due Date Monday, 22, June**
     * **Deliverables**:
-        *
-        *
+        * look for avalible apis	(local laws, shelts, food, benifits, etc)
+        * Research mental health resources
 
 ## Bike
 **ONE additional features that get you closer to your idealized product. Examples: CRUD 2nd resource, add comments, API use, authentication, library use** 
 
-- **Phase 4**: Test First Approach - **Due Date DW, DD,Moth,Year**
+- **Phase 4**: PHASE_NAME - **Due Date DW, DD,Moth,Year**
     * **Deliverables**:
         *
         *
-- **Phase 5**: PHASE_NAME - **Due Date DW, DD,Moth,Year**
+- **Phase 5**: Test First Approach - **Due Date DW, DD,Moth,Year**
     * **Deliverables**:
         *
         *
@@ -63,11 +67,11 @@
 ## Car
 **ONE additional feature** 
 
-- **Phase 7**: PHASE_NAME - **Due Date DW, DD,Moth,Year**
+- **Phase 7**: Polish #1 - **Due Date DW, DD,Moth,Year**
     * **Deliverables**:
+        * Modifiy Presentation
         *
-        *
-- **Phase 8**: PHASE_NAME - **Due Date DW, DD,Moth,Year**
+- **Phase 8**: Logistics/Documentation - **Due Date DW, DD,Moth,Year**
     * **Deliverables**:
         *
         *
@@ -80,8 +84,8 @@
 
 - **Phase 10**: Final Deliverable - **Due Date DW, DD,Moth,Year**.
     * **Deliverables**:
-        *
-        *
+        * Finalize & Practice 
+        * Present
 
 
 ## Personal Achievement Goals:
@@ -133,9 +137,9 @@
 
 **Insert wireframe pictures here**
 
-![wireframe_landing](staticfiles/img/wireframes/landing.png)
-![wireframe_detail](staticfiles/img/wireframes/detail.png)
-![wireframe_creators](staticfiles/img/wireframes/creators.png)
+<!-- ![wireframe_landing](static/img/wireframes/landing.png)
+![wireframe_detail](static/img/wireframes/detail.png)
+![wireframe_creators](static/img/wireframes/creators.png) -->
 
 
 ## Evaluation
