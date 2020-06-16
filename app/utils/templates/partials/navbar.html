@@ -23,8 +23,8 @@
 
                 <li class="nav-item d-flex justify-content-end">
                     {% if user.is_staff %}
-                        <a class="nav-link" href="/Admin/"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
-                        <a href="/Admin/logout/" class="btn btn-danger">Log Out</a>
+                        <a class="nav-link" href="/ACP/"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
+                        <a href="/ACP/logout/" class="btn btn-danger">Log Out</a>
                     {% comment %} {% elif user.is_authenticated %}
                         <a class="nav-link" href="{% url 'profile' user %}"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
                         <a class="nav-link" href="{% url 'account_logout' %}"" class="btn btn-danger">Log Out</a>
