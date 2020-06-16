@@ -1,0 +1,28 @@
+<!-- templates/resources.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 class="text-center mb-5">Local Resources in San Francisco!</h1>
+
+<span class="fa fa-money" role="img" aria-label="" aria-hidden="true">
+<a href="{% url 'benifits' %}">Benifits</a>
+</span>
+<br><br>
+
+<span class="fa fa-home" role="img" aria-label="" aria-hidden="true">
+<a href="{% url 'shelter-info' %}">Shelters</a>
+</span>
+<br><br>
+
+<a href="{% url 'food-locations' %}">Food</a>
+<br><br>
+
+<a href="{% url 'legal-help' %}">Legal Help</a>
+<br><br>
+
+<span class="fa fa-user-md" role="img" aria-label="" aria-hidden="true">
+<a href="https://make.sc/mental-health-resources"> SF Mental Health Resources</a>
+</span>
+
+{% endblock %}

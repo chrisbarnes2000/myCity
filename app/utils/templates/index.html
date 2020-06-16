@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1 class="text-center mb-5">Welcome to Project-name!</h1>
+<h1 class="text-center mb-5">Welcome to myCity!</h1>
 
 <div class="row d-flex">
     <!-- <div class="col text-center embed-responsive embed-responsive-16by9 float-right">
@@ -10,16 +10,29 @@
             <source src="{% static 'videos/splash.mp4' %}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div> 
-    <img src="{% static 'img/splash.png' %}" class="img-fluid" style="width: 100%; float: left;" /> -->
+    </div>  -->
+    {% comment %} <img src="{% static 'img/splash.png' %}" class="img-fluid" style="width: 100%; float: left;" /> {% endcomment %}
+    <a href="https://placeholder.com"><img class=img-fluid" style="width: 100%; float: left;"
+        src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a>
     <div class="col float-left mt-5">
-        <p>
+        <h2>myCity is an educational app that keeps you informed of:</h2>
+        <ul>
+            <li>Your legal rights & local laws over at <a href="{% url 'legal-help' %}">Legal Help</a>
+            <br>(providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained)</li>
             
+            <li>Available support resources over at <a href="{% url 'resources' %}">Resources</a>
+            <br>(govt agencies, non-profits, and local businesses that help with things such as 
+            <br> - medical info, addiction recovery resources, access to food, housing, etc)
+            </li>
+            
+            <li>Later we plan to allow for Instantly submitting and track <a href="{% url 'benifits' %}">Benifits</a> applications via mobile app and mobile/user-friendly website. 
+            <br>(It’s the get calfresh for all benefits.) 
+            </li> 
         </p>
-        <p>For more information <a href="{% url 'creators' %}">about the Creators</a> please visit this link.</p>
 
         <hr>
 
+        <p>For more information <a href="{% url 'creators' %}">about the Creators</a> please visit this link.</p>
 
     </div>
 </div>

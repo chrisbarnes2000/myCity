@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 # from django.views.static import serve
 
 
-from utils.views import index, creators, image_upload
+from utils.views import index, creators, image_upload, resources, benifits, shelter_info, food_locations, legal_help
 from .serializer import router
    
 urlpatterns = [
@@ -16,9 +16,9 @@ urlpatterns = [
     path("ACP/", admin.site.urls),
 
     # Accounts app
-    # path('users/', include('django.contrib.auth.urls')),
+    path('users/', include('django.contrib.auth.urls')),
     # path('users/', include('users.urls')),
-    path('accounts/', include('allauth.urls')),
+    # path('accounts/', include('allauth.urls')),
 
     # API
     path('api/', include(router.urls)),
@@ -26,6 +26,26 @@ urlpatterns = [
 
     # Creators Page
     path('Creators/', creators, name='creators'),
+
+    # Creators Page
+    path('resources/', resources, name='resources'),
+    # Creators Page
+    path('benifits/', benifits, name='benifits'),
+    # Creators Page
+    path('shelter-info/', shelter_info, name='shelter-info'),
+    # Creators Page
+    path('food-locations/', food_locations, name='food-locations'),
+    # Creators Page
+    path('legal-help/', legal_help, name='legal-help'),
+    # Creators Page
+    # path('pandemic-info/', pandemic_info, name='pandemic-info'),
+    
+
+
+    
+
+
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if bool(settings.DEBUG):

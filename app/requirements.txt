@@ -7,3 +7,4 @@ django-admin-env-notice==0.2
 django-admin-honeypot==1.1.0
 django-allauth==0.41.0
 whitenoise==5.0.1
+django-google-maps==0.12.1
