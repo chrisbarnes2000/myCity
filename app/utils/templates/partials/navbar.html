@@ -1,5 +1,5 @@
 <!-- NAVBAR -->
-{% load socialaccount %}
+{% comment %} {% load socialaccount %} {% endcomment %}
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="{% url 'index' %}" style="margin-left: 4em;">myCity</a>
     <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -11,7 +11,8 @@
             <ul class="navbar-nav m-auto" id="myNav">
                 {% comment %} <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'image-upload' %}">Contribute Photo</a></li> {% endcomment %}
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'pandemic-info' %}">Pandemic Info</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="https://sf.gov/topics/coronavirus-covid-19">Pandemic Info</a></li>
+                {% comment %} {% url 'pandemic-info' %} {% endcomment %}
 
 {% comment %}
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'benifits' %}">Benifits</a></li>

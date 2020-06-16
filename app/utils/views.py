@@ -31,8 +31,8 @@ def resources(request):
 def benifits(request):
     return render(request, "benifits.html", {})
 
-def pandemic_info(request):
-    return render(request, "pandemic_info.html", {})
+# def pandemic_info(request):
+#     return render(request, "pandemic_info.html", {})
 
 def shelter_info(request):
     return render(request, "shelter_info.html", {})

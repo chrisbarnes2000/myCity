@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
 
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'django.contrib.postgres',
 
     'whitenoise.runserver_nostatic',
@@ -210,7 +210,7 @@ LOGOUT_REDIRECT_URL = "/"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 
-SITE_ID = 1
+# SITE_ID = 1
 
 ADMIN_HONEYPOT_EMAIL_ADMINS = True
 ADMINS = [('Chris Barnes', 'chris.barnes.2000@me.com')]
