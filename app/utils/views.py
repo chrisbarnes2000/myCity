@@ -32,13 +32,13 @@ def benifits(request):
     return render(request, "benifits.html", {})
 
 def pandemic_info(request):
-    pass
+    return render(request, "pandemic_info.html", {})
 
 def shelter_info(request):
-    pass
+    return render(request, "shelter_info.html", {})
 
 def food_locations(request):
-    pass
+    return render(request, "food_locations.html", {})
 
 def legal_help(request):
-    pass
+    return render(request, "legal_help.html", {})

@@ -16,9 +16,9 @@ urlpatterns = [
     path("ACP/", admin.site.urls),
 
     # Accounts app
-    # path('users/', include('django.contrib.auth.urls')),
+    path('users/', include('django.contrib.auth.urls')),
     # path('users/', include('users.urls')),
-    path('accounts/', include('allauth.urls')),
+    # path('accounts/', include('allauth.urls')),
 
     # API
     path('api/', include(router.urls)),

@@ -11,11 +11,14 @@
             <ul class="navbar-nav m-auto" id="myNav">
                 {% comment %} <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'image-upload' %}">Contribute Photo</a></li> {% endcomment %}
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'pandemic-info' %}">Pandemic Info</a></li>
+
+{% comment %}
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'benifits' %}">Benifits</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'shelter-info' %}">Shelters</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'food-locations' %}">Food</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'legal-help' %}">Legal Help</a></li>
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'pandemic-info' %}">Pandemic Info</a></li>
+ {% endcomment %}
 
                 <li class="nav-item d-flex justify-content-end">
                     {% if user.is_staff %}
@@ -45,9 +48,10 @@
                 </div>
                 <div id="myDropdown" class="dropdown-content">
                     <div class="menuItems">
-                        {% comment %} <a href="{% url '' '' %}">link 1</a>
-                        <a href="{% url '' '' %}">link 2</a>
-                        <a href="{% url '' '' %}">link 3</a> {% endcomment %}
+                        <a href="{% url 'benifits' %}">Benifits</a>
+                        <a href="{% url 'shelter-info' %}">Shelters</a>
+                        <a href="{% url 'food-locations' %}">Food</a>
+                        <a href="{% url 'legal-help' %}">Legal Help</a>
                     </div>
                 <div style="display:none;" class="dropdown-header dropdown_empty">No entry found</div>
             </div>

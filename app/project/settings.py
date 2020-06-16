@@ -8,10 +8,13 @@ DEBUG = os.environ.get("DEBUG")
 ROOT_URLCONF = 'project.urls'
 WSGI_APPLICATION = 'project.wsgi.application'
 
-ENVIRONMENT_NAME = os.environ.get("ENVIRONMENT_NAME", 'Production Server')
-ENVIRONMENT_COLOR = os.environ.get("ENVIRONMENT_COLOR", '#006400')
-ENVIRONMENT_FLOAT = os.environ.get("ENVIRONMENT_FLOAT", 'True')
+ENVIRONMENT_NAME = os.environ.get("ENVIRONMENT_NAME")
+ENVIRONMENT_COLOR = os.environ.get("ENVIRONMENT_COLOR")
+ENVIRONMENT_FLOAT = os.environ.get("ENVIRONMENT_FLOAT")
 # ENVIRONMENT_ADMIN_SELECTOR = os.environ.get("ENVIRONMENT_ADMIN_SELECTOR")
+
+
+GOOGLE_MAPS_API_KEY = os.environ.get("GOOGLE_MAPS_API_KEY")
 
 
 INSTALLED_APPS = [
@@ -32,15 +35,16 @@ INSTALLED_APPS = [
 
     "rest_framework",
 
+    "django_google_maps",
 
 
     "utils",
 
 
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
     # ... include the providers you want to enable:
     # 'allauth.socialaccount.providers.agave',
     # 'allauth.socialaccount.providers.amazon',
@@ -216,7 +220,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
+    # 'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 
