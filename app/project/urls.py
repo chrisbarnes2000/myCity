@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 from utils.views import index, creators, image_upload
 from .serializer import router
-
+   
 urlpatterns = [
     path('', index, name="index"),
     path('upload', image_upload, name="image-upload"),
