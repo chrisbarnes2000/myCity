@@ -1,14 +1,14 @@
 //
-//  LandingView.swift
+//  HomeView.swift
 //  myCity-Project
 //
-//  Created by Henry Calderon on 6/15/20.
+//  Created by Henry Calderon on 6/18/20.
 //  Copyright © 2020 Henry Calderon. All rights reserved.
 //
 
 import UIKit
 
-class LandingView: UIView {
+class HomeView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
