@@ -16,6 +16,10 @@
 		3F7A59F224984CED0064482F /* myCity_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59F124984CED0064482F /* myCity_ProjectTests.swift */; };
 		3F7A59FD24984CED0064482F /* myCity_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59FC24984CED0064482F /* myCity_ProjectUITests.swift */; };
 		3F8165CE249BE6A8000B9365 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8165CD249BE6A8000B9365 /* HomeView.swift */; };
+		3F843F62249C814700D0F4A1 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F843F60249C814700D0F4A1 /* ResourcesViewController.swift */; };
+		3F843F63249C814700D0F4A1 /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F843F61249C814700D0F4A1 /* ResourcesViewController.xib */; };
+		3F843F65249C818B00D0F4A1 /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F843F64249C818B00D0F4A1 /* ResourcesView.swift */; };
+		3F843F69249C84E800D0F4A1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F843F68249C84E800D0F4A1 /* ContainerViewController.swift */; };
 		3FEB9A1F2498894200FBE64C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB9A1D2498894200FBE64C /* HomeViewController.swift */; };
 		3FEB9A202498894200FBE64C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEB9A1E2498894200FBE64C /* HomeViewController.xib */; };
 		3FEB9A232498896800FBE64C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB9A212498896800FBE64C /* LandingViewController.swift */; };
@@ -56,6 +60,10 @@
 		3F7A59FC24984CED0064482F /* myCity_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCity_ProjectUITests.swift; sourceTree = "<group>"; };
 		3F7A59FE24984CED0064482F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F8165CD249BE6A8000B9365 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3F843F60249C814700D0F4A1 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		3F843F61249C814700D0F4A1 /* ResourcesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourcesViewController.xib; sourceTree = "<group>"; };
+		3F843F64249C818B00D0F4A1 /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
+		3F843F68249C84E800D0F4A1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		3FEB9A1D2498894200FBE64C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FEB9A1E2498894200FBE64C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3FEB9A212498896800FBE64C /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +119,8 @@
 		3F7A59D924984CEA0064482F /* myCity-Project */ = {
 			isa = PBXGroup;
 			children = (
+				3F843F67249C84C600D0F4A1 /* Container */,
+				3F843F66249C82DE00D0F4A1 /* Utils */,
 				3FEB9A18249888E100FBE64C /* Home */,
 				3FEB9A17249888D600FBE64C /* Landing */,
 				3FEB9A16249888BC00FBE64C /* Map-Finder */,
@@ -146,6 +156,38 @@
 			path = "myCity-ProjectUITests";
 			sourceTree = "<group>";
 		};
+		3F843F5E249C804200D0F4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F843F60249C814700D0F4A1 /* ResourcesViewController.swift */,
+				3F843F64249C818B00D0F4A1 /* ResourcesView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F843F5F249C805000D0F4A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F843F61249C814700D0F4A1 /* ResourcesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F843F66249C82DE00D0F4A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3F843F67249C84C600D0F4A1 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				3F843F68249C84E800D0F4A1 /* ContainerViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		3FEB9A132498889500FBE64C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +198,8 @@
 		3FEB9A14249888A000FBE64C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F843F5F249C805000D0F4A1 /* View */,
+				3F843F5E249C804200D0F4A1 /* Controller */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -334,6 +378,7 @@
 				3F7A59E724984CEC0064482F /* LaunchScreen.storyboard in Resources */,
 				3F7A59E424984CEC0064482F /* Assets.xcassets in Resources */,
 				3F7A59E224984CEA0064482F /* Main.storyboard in Resources */,
+				3F843F63249C814700D0F4A1 /* ResourcesViewController.xib in Resources */,
 				3FEB9A202498894200FBE64C /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,8 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F843F65249C818B00D0F4A1 /* ResourcesView.swift in Sources */,
 				3FEB9A2624988AD900FBE64C /* LandingView.swift in Sources */,
+				3F843F69249C84E800D0F4A1 /* ContainerViewController.swift in Sources */,
 				3F8165CE249BE6A8000B9365 /* HomeView.swift in Sources */,
+				3F843F62249C814700D0F4A1 /* ResourcesViewController.swift in Sources */,
 				3F7A59DF24984CEA0064482F /* ViewController.swift in Sources */,
 				3F7A59DB24984CEA0064482F /* AppDelegate.swift in Sources */,
 				3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */,
