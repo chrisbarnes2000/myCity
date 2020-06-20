@@ -28,8 +28,8 @@ def image_upload(request):
 def resources(request):
     return render(request, "resources.html", {})
 
-def benifits(request):
-    return render(request, "benifits.html", {})
+def benefits(request):
+    return render(request, "benefits.html", {})
 
 # def pandemic_info(request):
 #     return render(request, "pandemic_info.html", {})
