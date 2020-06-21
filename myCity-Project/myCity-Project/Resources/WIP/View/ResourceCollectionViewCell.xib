@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ResourceCollectionViewCell" customModule="myCity_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="254" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="254" height="62"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4DW-oE-Hfe">
+                        <rect key="frame" x="0.0" y="0.0" width="254" height="62"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resource" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCU-eI-V22">
+                        <rect key="frame" x="91" y="20.5" width="72" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="4DW-oE-Hfe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="E1C-kb-ycb"/>
+                <constraint firstItem="MCU-eI-V22" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="H50-Sr-xor"/>
+                <constraint firstAttribute="bottom" secondItem="4DW-oE-Hfe" secondAttribute="bottom" id="Otz-1D-5fj"/>
+                <constraint firstItem="4DW-oE-Hfe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xav-Bz-Yjx"/>
+                <constraint firstItem="MCU-eI-V22" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="jpG-xj-nO1"/>
+                <constraint firstAttribute="trailing" secondItem="4DW-oE-Hfe" secondAttribute="trailing" id="kik-re-qWL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="254" height="62"/>
+            <connections>
+                <outlet property="backgroundImg" destination="4DW-oE-Hfe" id="h0p-h8-PQ5"/>
+                <outlet property="resourceLabel" destination="MCU-eI-V22" id="QpP-ME-G3H"/>
+            </connections>
+            <point key="canvasLocation" x="279.71014492753625" y="156.69642857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -20,6 +20,10 @@
 		3F843F63249C814700D0F4A1 /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F843F61249C814700D0F4A1 /* ResourcesViewController.xib */; };
 		3F843F65249C818B00D0F4A1 /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F843F64249C818B00D0F4A1 /* ResourcesView.swift */; };
 		3F843F69249C84E800D0F4A1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F843F68249C84E800D0F4A1 /* ContainerViewController.swift */; };
+		3F989A7E249F198200F04580 /* ResourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F989A7C249F198200F04580 /* ResourceCollectionViewCell.swift */; };
+		3F989A7F249F198200F04580 /* ResourceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F989A7D249F198200F04580 /* ResourceCollectionViewCell.xib */; };
+		3FAB1A50249F223000A6D293 /* ResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB1A4F249F223000A6D293 /* ResourceViewController.swift */; };
+		3FAB1A52249F226000A6D293 /* ResourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB1A51249F226000A6D293 /* ResourceCollectionViewCell.swift */; };
 		3FEB9A1F2498894200FBE64C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB9A1D2498894200FBE64C /* HomeViewController.swift */; };
 		3FEB9A202498894200FBE64C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEB9A1E2498894200FBE64C /* HomeViewController.xib */; };
 		3FEB9A232498896800FBE64C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB9A212498896800FBE64C /* LandingViewController.swift */; };
@@ -64,6 +68,10 @@
 		3F843F61249C814700D0F4A1 /* ResourcesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourcesViewController.xib; sourceTree = "<group>"; };
 		3F843F64249C818B00D0F4A1 /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
 		3F843F68249C84E800D0F4A1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		3F989A7C249F198200F04580 /* ResourceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F989A7D249F198200F04580 /* ResourceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceCollectionViewCell.xib; sourceTree = "<group>"; };
+		3FAB1A4F249F223000A6D293 /* ResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceViewController.swift; sourceTree = "<group>"; };
+		3FAB1A51249F226000A6D293 /* ResourceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FEB9A1D2498894200FBE64C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FEB9A1E2498894200FBE64C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3FEB9A212498896800FBE64C /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				3F843F60249C814700D0F4A1 /* ResourcesViewController.swift */,
+				3F989A7C249F198200F04580 /* ResourceCollectionViewCell.swift */,
 				3F843F64249C818B00D0F4A1 /* ResourcesView.swift */,
 			);
 			path = Controller;
@@ -169,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				3F843F61249C814700D0F4A1 /* ResourcesViewController.xib */,
+				3F989A7D249F198200F04580 /* ResourceCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +198,24 @@
 			path = Container;
 			sourceTree = "<group>";
 		};
+		3FAB1A4D249F21F100A6D293 /* WIP */ = {
+			isa = PBXGroup;
+			children = (
+				3F843F5E249C804200D0F4A1 /* Controller */,
+				3F843F5F249C805000D0F4A1 /* View */,
+			);
+			path = WIP;
+			sourceTree = "<group>";
+		};
+		3FAB1A4E249F220600A6D293 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				3FAB1A4F249F223000A6D293 /* ResourceViewController.swift */,
+				3FAB1A51249F226000A6D293 /* ResourceCollectionViewCell.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		3FEB9A132498889500FBE64C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +226,8 @@
 		3FEB9A14249888A000FBE64C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3F843F5F249C805000D0F4A1 /* View */,
-				3F843F5E249C804200D0F4A1 /* Controller */,
+				3FAB1A4E249F220600A6D293 /* Collection */,
+				3FAB1A4D249F21F100A6D293 /* WIP */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -375,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FEB9A242498896800FBE64C /* LandingViewController.xib in Resources */,
+				3F989A7F249F198200F04580 /* ResourceCollectionViewCell.xib in Resources */,
 				3F7A59E724984CEC0064482F /* LaunchScreen.storyboard in Resources */,
 				3F7A59E424984CEC0064482F /* Assets.xcassets in Resources */,
 				3F7A59E224984CEA0064482F /* Main.storyboard in Resources */,
@@ -404,8 +433,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAB1A52249F226000A6D293 /* ResourceCollectionViewCell.swift in Sources */,
 				3F843F65249C818B00D0F4A1 /* ResourcesView.swift in Sources */,
 				3FEB9A2624988AD900FBE64C /* LandingView.swift in Sources */,
+				3FAB1A50249F223000A6D293 /* ResourceViewController.swift in Sources */,
 				3F843F69249C84E800D0F4A1 /* ContainerViewController.swift in Sources */,
 				3F8165CE249BE6A8000B9365 /* HomeView.swift in Sources */,
 				3F843F62249C814700D0F4A1 /* ResourcesViewController.swift in Sources */,
@@ -414,6 +445,7 @@
 				3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */,
 				3FEB9A232498896800FBE64C /* LandingViewController.swift in Sources */,
 				3FEB9A1F2498894200FBE64C /* HomeViewController.swift in Sources */,
+				3F989A7E249F198200F04580 /* ResourceCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
