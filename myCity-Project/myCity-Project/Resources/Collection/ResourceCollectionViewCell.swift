@@ -10,5 +10,24 @@ import UIKit
 
 class ResourceCollectionViewCell: UICollectionViewCell {
     static var identifier: String = "RCell"
+    
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     var textResource: UILabel!
+    
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        self.layer.cornerRadius = 5
+        loadCell()
+        
+    }
+    
+    func loadCell(){
+        self.contentView
+    }
 }
