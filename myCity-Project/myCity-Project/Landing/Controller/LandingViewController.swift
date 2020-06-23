@@ -18,6 +18,7 @@ class LandingViewController: UIViewController {
 
     func goHome(){
         let nextVC = ContainerViewController()
+        
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
