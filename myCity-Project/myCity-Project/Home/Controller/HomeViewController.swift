@@ -12,16 +12,17 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
+        self.navigationController?.isNavigationBarHidden = true
+//        configureNavigationBar()
     }
     
-    func configureNavigationBar(){
-        navigationController?.navigationBar.barTintColor = .darkGray
-        navigationController?.navigationBar.barStyle = .black
-        
-        navigationItem.title = "Home"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburgerIconWhite3").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
-    }
+//    func configureNavigationBar(){
+//        navigationController?.navigationBar.barTintColor = .darkGray
+//        navigationController?.navigationBar.barStyle = .black
+//
+//        navigationItem.title = "Home"
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburgerIconWhite3").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
+//    }
     
     @objc func handleMenuToggle(){
         print("Toggle Menu")

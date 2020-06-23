@@ -23,17 +23,19 @@ class ResourceViewController: UIViewController {
     }()
     
     let resources: [Resource] = [
-        Resource(name: "R1", image: "menu-icon"),
-        Resource(name: "R2", image: "menu-icon"),
-        Resource(name: "R3", image: ""),
-        Resource(name: "R4", image: ""),
-        Resource(name: "R5", image: ""),
-        Resource(name: "R6", image: "")
+        Resource(name: "SF Mental Health Resources", image: "menu-icon"),
+        Resource(name: "Better Help", image: "menu-icon"),
+        Resource(name: "Benefits", image: ""),
+        Resource(name: "Shelters", image: ""),
+        Resource(name: "Food", image: ""),
+        Resource(name: "Legal Help", image: "")
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Resources"
+        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController = false
+//        self.title = "Resources"
         view.addSubview(resourceCollection)
     }
     
@@ -46,7 +48,7 @@ extension ResourceViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResourceCollectionViewCell.identifier, for: indexPath) as! ResourceCollectionViewCell
-        cell.imageView.image = UIImage(named: "menu-icon")
+        cell.imageView.image = UIImage(named: resources[indexPath.row].image)
         cell.textResource.text = "\(resources[indexPath.row].name)"
         return cell
     }
