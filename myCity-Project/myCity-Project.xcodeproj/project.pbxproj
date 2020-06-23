@@ -142,6 +142,7 @@
 		3F7A59D924984CEA0064482F /* myCity-Project */ = {
 			isa = PBXGroup;
 			children = (
+				3F8B46E124A27731002CDBDC /* Tab-Bar */,
 				3F01961A24A1B9BB00EA4323 /* Network Manager */,
 				3F843F67249C84C600D0F4A1 /* Container */,
 				3F843F66249C82DE00D0F4A1 /* Utils */,
@@ -193,6 +194,13 @@
 				3F843F68249C84E800D0F4A1 /* ContainerViewController.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		3F8B46E124A27731002CDBDC /* Tab-Bar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tab-Bar";
 			sourceTree = "<group>";
 		};
 		3FAB1A4E249F220600A6D293 /* Collection */ = {
