@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             
             let window = UIWindow(windowScene: windowScene)
-            let landing = ResourcesViewController()
+            let landing = ResourceViewController()
             //                    let landing = LandingViewController()
             
             let navigation = UINavigationController(rootViewController: landing)
