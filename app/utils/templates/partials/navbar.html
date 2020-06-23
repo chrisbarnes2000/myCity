@@ -1,5 +1,5 @@
 <!-- NAVBAR -->
-{% load socialaccount %}
+{% comment %} {% load socialaccount %} {% endcomment %}
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="{% url 'index' %}" style="margin-left: 4em;">myCity</a>
     <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -11,16 +11,20 @@
             <ul class="navbar-nav m-auto" id="myNav">
                 {% comment %} <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'image-upload' %}">Contribute Photo</a></li> {% endcomment %}
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'benifits' %}">Benifits</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="https://sf.gov/topics/coronavirus-covid-19">Pandemic Info</a></li>
+                {% comment %} {% url 'pandemic-info' %} {% endcomment %}
+
+{% comment %}
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'benefits' %}">benefits</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'shelter-info' %}">Shelters</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'food-locations' %}">Food</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'legal-help' %}">Legal Help</a></li>
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'pandemic-info' %}">Pandemic Info</a></li>
+ {% endcomment %}
 
                 <li class="nav-item d-flex justify-content-end">
                     {% if user.is_staff %}
-                        <a class="nav-link" href="/Admin/"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
-                        <a href="/Admin/logout/" class="btn btn-danger">Log Out</a>
+                        <a class="nav-link" href="/ACP/"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
+                        <a href="/ACP/logout/" class="btn btn-danger">Log Out</a>
                     {% comment %} {% elif user.is_authenticated %}
                         <a class="nav-link" href="{% url 'profile' user %}"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
                         <a class="nav-link" href="{% url 'account_logout' %}"" class="btn btn-danger">Log Out</a>
@@ -45,9 +49,10 @@
                 </div>
                 <div id="myDropdown" class="dropdown-content">
                     <div class="menuItems">
-                        {% comment %} <a href="{% url '' '' %}">link 1</a>
-                        <a href="{% url '' '' %}">link 2</a>
-                        <a href="{% url '' '' %}">link 3</a> {% endcomment %}
+                        <a href="{% url 'benefits' %}">Benefits</a>
+                        <a href="{% url 'shelter-info' %}">Shelters</a>
+                        <a href="{% url 'food-locations' %}">Food</a>
+                        <a href="{% url 'legal-help' %}">Legal Help</a>
                     </div>
                 <div style="display:none;" class="dropdown-header dropdown_empty">No entry found</div>
             </div>

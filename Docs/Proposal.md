@@ -44,7 +44,7 @@
         * Fill out Documentation (user journey, interview)
 - **Phase 3**: Research - **Due Date Monday, 22, June**
     * **Deliverables**:
-        * look for avalible apis	(local laws, shelts, food, benifits, etc)
+        * look for avalible apis	(local laws, shelts, food, benefits, etc)
         * Research mental health resources
 
 ## Bike

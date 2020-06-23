@@ -3,6 +3,36 @@
 {% load static %}
 {% block content %}
 
-<h1 class="text-center mb-5">Put your content here!</h1>
+<h1 class="text-center mb-5">Local Resources in San Francisco!</h1>
+
+<span class="fa fa-user-md" role="img" aria-label="" aria-hidden="true">
+<a href="https://make.sc/mental-health-resources"> SF Mental Health Resources</a>
+</span>
+<br><br>
+
+<span class="fa fa-envira" role="img" aria-label="" aria-hidden="true">
+<a href="https://www.betterhelp.com/"> Better Help</a>
+</span>
+<br><br>
+
+<span class="fa fa-money" role="img" aria-label="" aria-hidden="true">
+<a href="{% url 'benefits' %}">benefits</a>
+</span>
+<br><br>
+
+<span class="fa fa-home" role="img" aria-label="" aria-hidden="true">
+<a href="{% url 'shelter-info' %}">Shelters</a>
+</span>
+<br><br>
+
+
+<span class="fas fa-drumstick-bite" role="img" aria-label="" aria-hidden="true">
+<a href="{% url 'food-locations' %}">Food</a>
+</span>
+<br><br>
+
+<a href="{% url 'legal-help' %}">Legal Help</a>
+<br><br>
+
 
 {% endblock %}

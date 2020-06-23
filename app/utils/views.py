@@ -28,17 +28,17 @@ def image_upload(request):
 def resources(request):
     return render(request, "resources.html", {})
 
-def benifits(request):
-    return render(request, "benifits.html", {})
+def benefits(request):
+    return render(request, "benefits.html", {})
 
-def pandemic_info(request):
-    pass
+# def pandemic_info(request):
+#     return render(request, "pandemic_info.html", {})
 
 def shelter_info(request):
-    pass
+    return render(request, "shelter_info.html", {})
 
 def food_locations(request):
-    pass
+    return render(request, "food_locations.html", {})
 
 def legal_help(request):
-    pass
+    return render(request, "legal_help.html", {})

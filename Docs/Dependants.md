@@ -19,7 +19,7 @@ Includes the following built in support for:
 - **[`django-admin-honeypot`](https://django-admin-honeypot.readthedocs.io/en/latest/)**: django-admin-honeypot is a fake Django admin login screen to log and notify admins of attempted unauthorized access.
 - **[`django-allauth`](https://django-allauth.readthedocs.io/en/latest/installation.html)**: Django Allauth offers a fully integrated authentication app that allows for both local and social authentication.
 - **[`djangorestframework`](https://www.django-rest-framework.org/)**: Django REST framework is a powerful and flexible toolkit for building Web APIs.
-
+- **[`django-google-maps`](https://pypi.org/project/django-google-maps/)**: is a simple application that provides the basic hooks into google maps V3 api for use in Django
 
 <!-- - **[``]()**:  -->
 <!-- - **[``]()**:  -->

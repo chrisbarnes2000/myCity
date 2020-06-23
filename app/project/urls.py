@@ -5,9 +5,9 @@ from django.conf.urls.static import static
 # from django.views.static import serve
 
 
-from utils.views import index, creators, image_upload, resources, benifits, pandemic_info, shelter_info, food_locations, legal_help
+from utils.views import index, creators, image_upload, resources, benefits, shelter_info, food_locations, legal_help
 from .serializer import router
-
+   
 urlpatterns = [
     path('', index, name="index"),
     path('upload', image_upload, name="image-upload"),
@@ -16,9 +16,9 @@ urlpatterns = [
     path("ACP/", admin.site.urls),
 
     # Accounts app
-    # path('users/', include('django.contrib.auth.urls')),
+    path('users/', include('django.contrib.auth.urls')),
     # path('users/', include('users.urls')),
-    path('accounts/', include('allauth.urls')),
+    # path('accounts/', include('allauth.urls')),
 
     # API
     path('api/', include(router.urls)),
@@ -30,7 +30,7 @@ urlpatterns = [
     # Creators Page
     path('resources/', resources, name='resources'),
     # Creators Page
-    path('benifits/', benifits, name='benifits'),
+    path('benefits/', benefits, name='benefits'),
     # Creators Page
     path('shelter-info/', shelter_info, name='shelter-info'),
     # Creators Page
@@ -38,7 +38,7 @@ urlpatterns = [
     # Creators Page
     path('legal-help/', legal_help, name='legal-help'),
     # Creators Page
-    path('pandemic-info/', pandemic_info, name='pandemic-info'),
+    # path('pandemic-info/', pandemic_info, name='pandemic-info'),
     
 
 
