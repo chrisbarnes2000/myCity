@@ -16,13 +16,15 @@ class ResourceViewController: UIViewController {
         cView.delegate = self
         cView.dataSource = self
         cView.backgroundColor = .white
+        cView.alwaysBounceVertical = true
+        cView.collectionViewLayout = CustomFlowLayout()
         cView.register(ResourceCollectionViewCell.self, forCellWithReuseIdentifier: ResourceCollectionViewCell.identifier)
         return cView
     }()
     
     let resources: [Resource] = [
-        Resource(name: "R1", image: ""),
-        Resource(name: "R2", image: ""),
+        Resource(name: "R1", image: "menu-icon"),
+        Resource(name: "R2", image: "menu-icon"),
         Resource(name: "R3", image: ""),
         Resource(name: "R4", image: ""),
         Resource(name: "R5", image: ""),
@@ -44,6 +46,7 @@ extension ResourceViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResourceCollectionViewCell.identifier, for: indexPath) as! ResourceCollectionViewCell
+        cell.imageView.image = UIImage(named: "menu-icon")
         cell.textResource.text = "\(resources[indexPath.row].name)"
         return cell
     }

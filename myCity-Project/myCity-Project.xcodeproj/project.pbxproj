@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F01961724A1B11B00EA4323 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01961624A1B11B00EA4323 /* Resources.swift */; };
+		3F01961924A1B87C00EA4323 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01961824A1B87C00EA4323 /* CustomFlowLayout.swift */; };
 		3F7A59DB24984CEA0064482F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DA24984CEA0064482F /* AppDelegate.swift */; };
 		3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DC24984CEA0064482F /* SceneDelegate.swift */; };
 		3F7A59DF24984CEA0064482F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DE24984CEA0064482F /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		3F01961624A1B11B00EA4323 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		3F01961824A1B87C00EA4323 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		3F7A59D724984CEA0064482F /* myCity-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "myCity-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7A59DA24984CEA0064482F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7A59DC24984CEA0064482F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				3FAB1A4F249F223000A6D293 /* ResourceViewController.swift */,
 				3FAB1A51249F226000A6D293 /* ResourceCollectionViewCell.swift */,
+				3F01961824A1B87C00EA4323 /* CustomFlowLayout.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */,
 				3F01961724A1B11B00EA4323 /* Resources.swift in Sources */,
 				3FEB9A232498896800FBE64C /* LandingViewController.swift in Sources */,
+				3F01961924A1B87C00EA4323 /* CustomFlowLayout.swift in Sources */,
 				3FEB9A1F2498894200FBE64C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
