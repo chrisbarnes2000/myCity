@@ -13,11 +13,16 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        goHome()
+//        perform(goHome())
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            // your code here
+            self.goHome()
+        }
+//        goHome()
     }
 
     func goHome(){
-        let nextVC = ContainerViewController()
+        let nextVC = TabBarController()
         
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
