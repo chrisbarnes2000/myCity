@@ -4,19 +4,14 @@
 {% block content %}
 
 <h1 class="text-center mb-5">Local Resources in San Francisco!</h1>
-
-<span class="fa fa-user-md" role="img" aria-label="" aria-hidden="true">
-<a href="https://make.sc/mental-health-resources"> SF Mental Health Resources</a>
-</span>
-<br><br>
-
+<center>
 <span class="fa fa-envira" role="img" aria-label="" aria-hidden="true">
 <a href="https://www.betterhelp.com/"> Better Help</a>
 </span>
 <br><br>
 
 <span class="fa fa-money" role="img" aria-label="" aria-hidden="true">
-<a href="{% url 'benefits' %}">benefits</a>
+<a href="{% url 'benefits' %}">Benefits</a>
 </span>
 <br><br>
 
@@ -33,6 +28,6 @@
 
 <a href="{% url 'legal-help' %}">Legal Help</a>
 <br><br>
-
+</center>
 
 {% endblock %}

@@ -1,7 +1,9 @@
 <!-- NAVBAR -->
+{%load static%}
 {% comment %} {% load socialaccount %} {% endcomment %}
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="{% url 'index' %}" style="margin-left: 4em;">myCity</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <img src="{% static 'img/myCityLogo.png' %}" class="img-fluid" style="width: 50px; height: 50px;" />
+    <a class="navbar-brand" href="{% url 'index' %}" style="margin-left: 1em;">myCity</a>
     <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
