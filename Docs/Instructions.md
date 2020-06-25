@@ -1,15 +1,20 @@
 # Contribute Instructions
 [Back](./)
 
-## To Get Started Learn the [Difference Between Clone and Fork](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/)
+## To Get Started
 
-Then clone and modify these files
-```sh
-$ git clone https://github.com/ChrisBarnes7404/Repo-Name.git
-```
+- Learn the [Difference Between Clone and Fork](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/)
+- Then follow these instructions to [Fork and Clone](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this repo
+
+## Next Set up the environment
+
 Look for these files to change
 
-![image](static/img/docs/look-for-me.jpeg)
+<!-- ![image](static/img/docs/look-for-me.jpeg) -->
+if the .env files below don't exist then run
+```Bash
+$ touch filename
+```
 
 1. Rename `*.env.dev-sample*` to `*.env.development*`.
 2. Update the environment variables (ask team lead for new values) in the `*docker-compose.yml*` and `*.env.development* files`.
@@ -21,7 +26,7 @@ Look for these files to change
 
 ### Run Locally
 ```sh
-$ docker-compose up -d --build
+$ docker-compose up --build
 ```
 
 Test it out at [http://localhost:8000](http://localhost:8000). The "app" folder is mounted into the container and your code changes apply automatically.
@@ -50,7 +55,12 @@ Command Short Cuts used below
 
 2. Edit Stuff and Test locally
 
-3. add, commit, & Push to that branch
+3. Merge with master and fix any conflicts
+    ```sh
+    $ gm FrontEnd/Development/Fixes
+    ```
+
+4. add, commit, & Push to that branch
 
     Use tags when committing ```ga .;gcmsg "[function] description"```
     * [pull]    Who made last change and your addition
@@ -62,15 +72,15 @@ Command Short Cuts used below
     $ git push origin FrontEnd/Development/Fixes
     ```
 
-4. Switch to master
+5. Switch to master
     ```sh
     $ gcm
     ```
-5. Merge with master
+6. Merge with master
     ```sh
     $ gm FrontEnd/Development/Fixes
     ```
-3. Push
+7. Push
     ```sh
     $ gp
     ```
@@ -86,7 +96,7 @@ Uses gunicorn + nginx.
 2. Build the images and run the containers:
 
     ```sh
-    $ docker-compose -f docker-compose.prod.yml up -d --build
+    $ docker-compose -f docker-compose.prod.yml up --build
     ```
 
     Test it out at [http://localhost:1337](http://localhost:1337). No mounted folders. To apply changes, the image must be re-built.
