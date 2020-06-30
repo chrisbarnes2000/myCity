@@ -10,13 +10,13 @@ from .serializer import router
    
 urlpatterns = [
     path('', index, name="index"),
-    path('upload', image_upload, name="image-upload"),
+    path('Upload', image_upload, name="image-upload"),
 
-    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+    path('Admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path("ACP/", admin.site.urls),
 
     # Accounts app
-    path('users/', include('django.contrib.auth.urls')),
+    path('Users/', include('django.contrib.auth.urls')),
     # path('users/', include('users.urls')),
     # path('accounts/', include('allauth.urls')),
 
@@ -28,15 +28,15 @@ urlpatterns = [
     path('Creators/', creators, name='creators'),
 
     # Creators Page
-    path('resources/', resources, name='resources'),
+    path('Resources/', resources, name='resources'),
     # Creators Page
-    path('benefits/', benefits, name='benefits'),
+    path('Benefits/', benefits, name='benefits'),
     # Creators Page
-    path('shelter-info/', shelter_info, name='shelter-info'),
+    path('Shelter-info/', shelter_info, name='shelter-info'),
     # Creators Page
-    path('food-locations/', food_locations, name='food-locations'),
+    path('Food-locations/', food_locations, name='food-locations'),
     # Creators Page
-    path('legal-help/', legal_help, name='legal-help'),
+    path('Legal-help/', legal_help, name='legal-help'),
     # Creators Page
     # path('pandemic-info/', pandemic_info, name='pandemic-info'),
 
@@ -46,7 +46,7 @@ urlpatterns = [
 
 
     # Success Page for redirects
-    path('success/', success, name='success'),
+    path('Success/', success, name='success'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
