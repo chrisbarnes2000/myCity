@@ -1,0 +1,24 @@
+{% load static %}
+<div class="card mb-3">
+    <h5 class="card-header ">{{ page.title }}</h5>
+    <div class="card-body border-dark">
+        {% if page.main_img %}
+            <img class="img-fluid" src="{{ page.main_img.url }}" alt="Main Page Image" />
+        {% else %}
+            <a href="https://placeholder.com"><img class=img-fluid"
+                src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a>
+        {% endif %}
+        <img class="img-fluid mt-2" src="{% static 'img/utils/reddivider.png' %}" style="width: 100%; float: right" alt="Red Divider">
+        <p class="card-text">
+            {{ page.content|truncatewords_html:30 }}
+            <hr>
+            <!-- <button class="btn btn-default" formaction="{% url 'delete-page' page.slug %}"><i class="fas fa-trash"></i></button> -->
+            <div class="text-right"><a href="{% url 'page-details' page.slug %}" title="Read More">Read More</a></div>
+        </p>
+    </div>  <!-- End Card Body-->
+
+    <div class="card-footer">
+        <p class="text-center text-muted">Last updated {{ page.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ page.author.username }}</b></p>
+    </div>  <!-- End Card Footer-->
+
+</div>      <!-- End Card -->

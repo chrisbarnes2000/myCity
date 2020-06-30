@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 # from django.views.static import serve
 
 
-from utils.views import index, creators, image_upload, resources, benefits, shelter_info, food_locations, legal_help
+from utils.views import *
 from .serializer import router
    
 urlpatterns = [
@@ -39,12 +39,14 @@ urlpatterns = [
     path('legal-help/', legal_help, name='legal-help'),
     # Creators Page
     # path('pandemic-info/', pandemic_info, name='pandemic-info'),
-    
 
 
-    
+    # Pages urls
+    path('Pages/', include('Pages.urls')),
 
 
+    # Success Page for redirects
+    path('success/', success, name='success'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col m-4">
+        <a href="{% url 'pages_landing' %}" class="btn btn-link float-right">Back to List</a>
+        <div class="row">
+            <h2>
+                {{ page.title }}
+                <!-- <small class="text-muted">Last updated by <b>{{ page.author.username }}</b> on
+                    {{ page.modified|date:"SHORT_DATETIME_FORMAT" }} </small> -->
+            </h2>
+            {% if user.is_authenticated and user.is_staff %}
+                <a href="{% url 'edit-page' slug=page.slug %}"><i class="fas fa-edit"></i></a>
+            {% endif %}
+        </div>
+
+
+        <hr>
+
+        <div class="row mt-2">
+            <div class="col text-center">
+                {% if page.main_img2 %}
+                    <img class="img-fluid" src="{{ page.main_img2.url }}" alt="2nd Main Page Image" />
+                {% else %}
+                    <a href="https://placeholder.com"><img class=img-fluid"
+                        src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a>
+                {% endif %}
+            </div>
+            
+            
+            <div class="col text-center">
+                {% if page.main_img3 %}
+                    <img class="img-fluid" src="{{ page.main_img3.url }}" alt="3rd Main Page Image" />
+                {% else %}
+                    <a href="https://placeholder.com"><img class=img-fluid"
+                        src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a>
+                {% endif %}
+            </div>
+            
+            
+            <div class="col text-center">
+                {% if page.main_img4 %}
+                    <img class="img-fluid" src="{{ page.main_img4.url }}" alt="4th Main Page Image" />
+                {% else %}
+                    <a href="https://placeholder.com"><img class=img-fluid"
+                        src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a>
+                {% endif %}
+            </div>
+        </div>
+
+         <div class="row mt-3">
+            <div class="col" style="margin-top: 3em; margin-bottom: 2em;">
+                <p>{{ page.content|linebreaksbr }}</p>
+
+                {% if page.sources %}
+                    <a class="float-right" href="{{ page.sources }}">More Content</a>
+                {% endif %}
+            </div>
+            {% comment %} <div class="col text-center">
+                {% if page.main_img %}
+                    <img class="img-fluid" src="{{ page.main_img.url }}" alt="Main Page Image" />
+                {% else %}
+                    <a href="https://placeholder.com"><img class=img-fluid"
+                        src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image"/></a>
+                {% endif %}
+            </div> {% endcomment %}
+        </div>
+
+    </div>
+</div>
+
+{% comment %} <hr>
+
+<p class="text-center">
+    <button class="btn btn-link" id="Photos-btn" data-toggle="collapse" data-target="#Photos" aria-expanded="true" aria-controls="Photos">
+        Photos
+    </button>
+    <button class="btn btn-link collapsed" id="Businesses-btn" data-toggle="collapse" data-target="#Businesses" aria-expanded="false" aria-controls="Businesses">
+        Businesses
+    </button>
+</p>
+
+<div id="accordion">
+    <div id="Photos" class="collapse show" aria-labelledby="Photos-btn" data-parent="#accordion">
+        <div class="card-body">
+            <!-- {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %} -->
+            <form action="{% url 'vote' page.slug %}" method="POST">
+                {% csrf_token %}
+                {% for photo in page.photo_set.all %}
+                    {% if photo.approved %}
+                    <div class="row justify-content-center">
+                        <!-- <img class="img-fluid" src="{{ photo.image.url }}" alt="User Uploaded Image"style="width: 75%; height: 75%;"> -->
+                        <input type="image" class="img-fluid" src="{{ photo.image.url }}" alt="User Uploaded Image" style="width: 25%" name="photo" id="photo_{{ forloop.counter }}" value="{{ photo.id }}">
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                            <label style="color:red;" for="photo_{{ forloop.counter }}">Love Votes: {{ photo.votes }}</label>
+                        </div>
+                        <div class="col-4">
+                            <input type="submit" value="Like">
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    {% endif %}
+                {% endfor%}
+            </form>
+        </div>
+    </div>
+
+    <div id="Businesses" class="collapse" aria-labelledby="Businesses-btn" data-parent="#accordion">
+        <div class="card-body">
+            <h1>Discovered {% if Businesses %}<small class="text-muted">({{ Businesses|length }}
+                    Businesses{{ Businesses|length|pluralize:"s" }})</small>{% endif %}</h1>
+            <hr>
+            {% if Businesses %}
+                <div class="card-columns">
+                    {% for Business in Businesses %}
+                        {% include "partials/yelp_business_card.html" %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="alert alert-primary" role="alert">No pages to display.</div>
+            {% endif %}
+        </div>
+    </div>
+</div> {% endcomment %}
+
+{% endblock %}

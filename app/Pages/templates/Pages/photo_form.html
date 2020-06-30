@@ -1,0 +1,70 @@
+<!-- Pages/contribute.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contribute to 37 Pages{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col mt-5 pt-3">
+        <img class="img-fluid image-responsive" src="{% static 'images/contribute.png' %}" alt="Contribute">
+    </div>
+    <div class="col">
+        <h1 class="text-center" style="margin-top: 60px;">We Need Your Pictures!</h1>
+        <p class="mb-6">Please provide us with context related to this photo, it can be as simple as I was out in this area and took a cool photo id like to share.
+        We would also like your first and Last name and an email address so that we may be able to further contact you if we have questions about your uploaded photo</p>
+
+        <form class="form-horizontal mt-3" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group form-row">
+                <div class="col">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <span class="text-danger small">{{ form.first_name.errors }}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="First name" name="{{ form.first_name.name }}" id="id_{{ form.first_name.name }}">
+                </div>
+                <div class="col">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <span class="text-danger small">{{ form.last_name.errors }}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Last name" name="{{ form.last_name.name }}" id="id_{{ form.last_name.name }}">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="col">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <span class="text-danger small">{{ form.email.errors }}</span>
+                    </div>
+                    <input type="text-form" class="form-control" placeholder="Email Address" name="{{ form.email.name }}" id="id_{{ form.email.name }}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <span class="text-danger small">{{ form.content.errors }}</span>
+                    </div>
+                    <textarea class="form-control" placeholder="Tell us about your photo..." rows="7" name="{{ form.content.name }}" id="id_{{ form.content.name }}"></textarea>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center justify-content-around mt-3 mb-3">
+                <div class="col ml-5">
+                    <span class="text-danger small">{{ form.page.errors }}</span>
+                    <span>What Page</span>
+                    <div>{{ form.page }}</div>
+                </div>
+                <div class="col-4 mt-3">
+                    <span class="text-danger small">{{ form.image.errors }}</span>
+                    <input type="file" name="{{ form.image.name }}" id="id_{{ form.image.name }}">
+                </div>
+                <div class="col mt-3">
+                    <input type="submit" value="Submit" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+{% endblock %}

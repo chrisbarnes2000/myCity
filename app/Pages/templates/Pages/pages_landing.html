@@ -1,0 +1,57 @@
+<!-- templates/boroughs_landing.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/boroughs-landing-styles.css' %}">
+{% endblock %}
+
+{% block title %}All 37 Boroughs{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+    <div class="a">
+        <a href="{% url 'borough-details' 'chinatownnob-hill' %}">
+            <img src="{% static 'images/Landing/chinatown-nobhill-main.png' %}" alt="Chinatown">
+            <div class="a-title centered">Chinatown</div>
+        </a>
+    </div>
+    <div class="b">
+        <a href="{% url 'borough-details' 'south-of-market' %}">
+            <img src="{% static 'images/Landing/soma-main.jpg' %}" alt="SoMa">
+            <div class="b-title centered">SoMa</div>
+        </a>
+    </div>
+    <div class="d">
+        <a href="{% url 'borough-details' 'downtowncivic-center' %}">
+            <img src="{% static 'images/Landing/downtown-civiccenter-main.jpeg' %}" alt="Downtown / Civic Center">
+            <div class="d-title centered">Downtown</div>
+        </a>
+    </div>
+    <div class="e">
+        <a href="{% url 'borough-details' 'haight-ashbury' %}">
+            <img src="{% static 'images/Landing/haight-main.jpg' %}" alt="Haight-Ashbury">
+            <div class="e-title centered">Haight-Ashbury</div>
+        </a>
+    </div>
+    <div class="f">
+        <a href="{% url 'borough-details' 'western-addition' %}">
+            <img src="{% static 'images/Landing/westernaddition-main.jpg' %}" alt="Western Addition" style="object-fit: cover;">
+            <div class="f-title centered">Western Addition</div>
+        </a>
+    </div>
+    <div class="g">
+        <a href="{% url 'borough-details' 'seacliff' %}">
+            <img src="{% static 'images/Landing/seacliff-main.jpg' %}" alt="Seacliff">
+            <div class="g-title centered">Seacliff</div>
+        </a>
+    </div>
+    <div class="h">
+        <a href="{% url 'borough-details' 'noe-valleybernal-heights' %}">
+            <img src="{% static 'images/Landing/noe-valley-bernal-heights-main.jpg' %}" alt="Noe Valley / Bernal Heights">
+            <div class="h-title centered" style="font-size:15px;">Noe Valley/Bernal Heights</div>
+        </a>
+    </div>
+</div>
+</div>
+{% endblock %}

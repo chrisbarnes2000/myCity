@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-6">
+        <h1 class="text-center">Add a new Page Location</h1>
+        <form class="form-horizontal mt-5" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'partials/form-template.html' %}
+            <div class="row justify-content-center">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    {% if user == page.author %}
+                    <button class="btn btn-default" formaction="{% url 'delete-page' page.slug %}"><i
+                            class="fas fa-trash"></i></button>
+                    {% endif%}
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-6">
+        <img src="{% static 'images/contribute.png' %}" class="img-fluid" alt="Contribute">
+    </div>
+</div>
+{% endblock %}

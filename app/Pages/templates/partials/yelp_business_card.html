@@ -1,0 +1,60 @@
+{% load static %}
+<div class="card mb-3">
+    <h5 class="card-header ">{{ Business.name }}</h5>
+    <div class="card-body border-dark">
+        {% if Business.image_url %}
+            <img class="img-fluid" src="{{ Business.image_url }}" style="width:250px; height:250px" alt="Business' Image" />
+        {% else %}
+            <a href="https://placeholder.com"><img class=img-fluid"
+                src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a>
+        {% endif %}
+        <img class="img-fluid mt-2" src="{% static 'images/reddivider.png' %}" style="width: 100%; float: right"
+            alt="Red Divider">
+        <p class="card-text">
+            {{ Business.location.display_address }}
+            <!-- " ".join(business["location"]["display_address"] -->
+            <br>
+            
+            <i class="fas fa-phone-volume">{{ Business.display_phone }}</i>
+            
+            <br>
+            Rating: {{ Business.rating }}, Review count: {{ Business.review_count}}
+
+            
+        </p>
+    </div>  <!-- End Card Body-->
+    <div class="card-footer">
+        <div class="text-left">Close</div>
+        <div class="text-right"><a href="{{ Business.url }}" title="Read More">Read More</a></div>
+        <!-- <p class="text-center text-muted">Last updated {{ Business.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ Business.author.username }}</b></p> -->
+    </div> <!-- End Card Footer -->
+</div>      <!-- End Card -->
+
+
+<!-- {
+    'id': 's5NsptQPippNuZ6gJyCqCA',
+    'alias': 'books-inc-san-francisco-16',
+    'name': 'Books Inc',
+    'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/r6E25K5i0aSW1yW2oAmCkQ/o.jpg',
+    'is_closed': False,
+    'url': 'https://www.yelp.com/biz/books-inc-san-francisco-16?adjust_creative=cwCuC1L5KwRcDdAfEvHjWg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=cwCuC1L5KwRcDdAfEvHjWg',
+    'review_count': 109,
+    'categories': [{'alias': 'bookstores', 'title': 'Bookstores'}],
+    'rating': 4.0,
+    'coordinates': {'latitude': 37.80001, 'longitude': -122.44029},
+    'transactions': [],
+    'price': '$$',
+    'location': {
+        'address1': '2251 Chestnut St',
+        'address2': '',
+        'address3': '',
+        'city': 'San Francisco',
+        'zip_code': '94123',
+        'country': 'US',
+        'state': 'CA',
+        'display_address': ['2251 Chestnut St', 'San Francisco, CA 94123']
+        },
+    'phone': '+14159313633',
+    'display_phone': '(415) 931-3633',
+    'distance': 4363.560372196896
+}  -->
