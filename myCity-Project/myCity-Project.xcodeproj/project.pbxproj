@@ -12,6 +12,7 @@
 		3F01961C24A1BA1200EA4323 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01961B24A1BA1200EA4323 /* NetworkManager.swift */; };
 		3F01961F24A1BC3400EA4323 /* LawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01961D24A1BC3400EA4323 /* LawViewController.swift */; };
 		3F01962024A1BC3400EA4323 /* LawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F01961E24A1BC3400EA4323 /* LawViewController.xib */; };
+		3F38D5A724AB142100D1CCBD /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A624AB142100D1CCBD /* BenefitsViewController.swift */; };
 		3F7A59DB24984CEA0064482F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DA24984CEA0064482F /* AppDelegate.swift */; };
 		3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DC24984CEA0064482F /* SceneDelegate.swift */; };
 		3F7A59DF24984CEA0064482F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DE24984CEA0064482F /* ViewController.swift */; };
@@ -64,6 +65,7 @@
 		3F01961B24A1BA1200EA4323 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3F01961D24A1BC3400EA4323 /* LawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawViewController.swift; sourceTree = "<group>"; };
 		3F01961E24A1BC3400EA4323 /* LawViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LawViewController.xib; sourceTree = "<group>"; };
+		3F38D5A624AB142100D1CCBD /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		3F7A59D724984CEA0064482F /* myCity-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "myCity-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7A59DA24984CEA0064482F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7A59DC24984CEA0064482F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,22 @@
 			path = DifferentSelects;
 			sourceTree = "<group>";
 		};
+		3F38D5A424AB13FC00D1CCBD /* Benefits */ = {
+			isa = PBXGroup;
+			children = (
+				3F38D5A524AB140700D1CCBD /* Controller */,
+			);
+			path = Benefits;
+			sourceTree = "<group>";
+		};
+		3F38D5A524AB140700D1CCBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F38D5A624AB142100D1CCBD /* BenefitsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3F7A59CE24984CEA0064482F = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +180,7 @@
 		3F7A59D924984CEA0064482F /* myCity-Project */ = {
 			isa = PBXGroup;
 			children = (
+				3F38D5A424AB13FC00D1CCBD /* Benefits */,
 				3F8B46E424A296CF002CDBDC /* Creators */,
 				3F8B46E124A27731002CDBDC /* Tab-Bar */,
 				3F01961A24A1B9BB00EA4323 /* Network Manager */,
@@ -515,6 +534,7 @@
 				3F01961724A1B11B00EA4323 /* Resources.swift in Sources */,
 				3FEB9A232498896800FBE64C /* LandingViewController.swift in Sources */,
 				3F8B46F124A29B71002CDBDC /* header.swift in Sources */,
+				3F38D5A724AB142100D1CCBD /* BenefitsViewController.swift in Sources */,
 				3F8B46EF24A29B04002CDBDC /* cProfile.swift in Sources */,
 				3F01961924A1B87C00EA4323 /* CustomFlowLayout.swift in Sources */,
 				3FEB9A1F2498894200FBE64C /* HomeViewController.swift in Sources */,
