@@ -23,8 +23,7 @@ class ResourceViewController: UIViewController {
     }()
     
     let resources: [Resource] = [
-        Resource(name: "SF Mental Health Resources", image: "menu-icon"),
-        Resource(name: "Better Help", image: "menu-icon"),
+        Resource(name: "Better Help", image: ""),
         Resource(name: "Benefits", image: ""),
         Resource(name: "Shelters", image: ""),
         Resource(name: "Food", image: ""),
@@ -54,6 +53,7 @@ extension ResourceViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         print("Selected an Item")
     }
     

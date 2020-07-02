@@ -16,11 +16,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
     }
     
+    //MARK: Setup Control
     func setupControl(){
         //Setup Color Scheme
-        self.tabBar.barTintColor = UIColor.white
-        self.tabBar.unselectedItemTintColor = UIColor.lightGray
-        self.tabBar.tintColor = UIColor.gray
+        self.tabBar.barTintColor = UIColor(named: "myCityBlue")
+        self.tabBar.unselectedItemTintColor = UIColor.white
+        self.tabBar.tintColor = UIColor(named: "veryLightGrey")
         //=================
         let home = HomeViewController()
         home.title = "Home"
@@ -41,14 +42,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         creators.title = "Creators"
         let navCreate = UINavigationController(rootViewController: creators)
         creators.tabBarItem = UITabBarItem(title: "Creators", image: UIImage(named: "creators"), tag: 3)
-//        creators.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
-   
-//        marketplace.tabBarItem = UITabBarItem(title: "Market", image: UIImage(named:"marketplace"), tag: 0)
-        
-        //        let profile = ProfileContentView()
-        //        let profileVC = UIHostingController(rootView: profile)
-        //        let navProf = UINavigationController(rootViewController: profileVC)
-        //        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named:"user"), tag: 1)
         
         viewControllers = [navHome, navRes, navPandem, navCreate]
     }
