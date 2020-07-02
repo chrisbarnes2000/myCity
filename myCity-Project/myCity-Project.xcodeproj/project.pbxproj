@@ -13,6 +13,7 @@
 		3F01961F24A1BC3400EA4323 /* LawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01961D24A1BC3400EA4323 /* LawViewController.swift */; };
 		3F01962024A1BC3400EA4323 /* LawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F01961E24A1BC3400EA4323 /* LawViewController.xib */; };
 		3F0F62FF24AC2FD9001F3A77 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F62FE24AC2FD9001F3A77 /* CustomView.swift */; };
+		3F1F2F4024AE5090006DD142 /* PandemicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F2F3F24AE5090006DD142 /* PandemicViewController.swift */; };
 		3F38D5A724AB142100D1CCBD /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A624AB142100D1CCBD /* BenefitsViewController.swift */; };
 		3F7A59DB24984CEA0064482F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DA24984CEA0064482F /* AppDelegate.swift */; };
 		3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DC24984CEA0064482F /* SceneDelegate.swift */; };
@@ -67,6 +68,7 @@
 		3F01961D24A1BC3400EA4323 /* LawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawViewController.swift; sourceTree = "<group>"; };
 		3F01961E24A1BC3400EA4323 /* LawViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LawViewController.xib; sourceTree = "<group>"; };
 		3F0F62FE24AC2FD9001F3A77 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		3F1F2F3F24AE5090006DD142 /* PandemicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandemicViewController.swift; sourceTree = "<group>"; };
 		3F38D5A624AB142100D1CCBD /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		3F7A59D724984CEA0064482F /* myCity-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "myCity-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7A59DA24984CEA0064482F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		3F0F630024AC394E001F3A77 /* Pamdemic */ = {
 			isa = PBXGroup;
 			children = (
+				3F1F2F3F24AE5090006DD142 /* PandemicViewController.swift */,
 			);
 			path = Pamdemic;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				3F8B46EF24A29B04002CDBDC /* cProfile.swift in Sources */,
 				3F01961924A1B87C00EA4323 /* CustomFlowLayout.swift in Sources */,
 				3FEB9A1F2498894200FBE64C /* HomeViewController.swift in Sources */,
+				3F1F2F4024AE5090006DD142 /* PandemicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
