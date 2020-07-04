@@ -18,7 +18,7 @@ You may change this names to your liking
 ## 1) Assumptions
 
 The following assumptions are made about your environment:
-- You have a working CapRover
+- You have a working CapRover (Get one deployed on [DigitalOcean](https://m.do.co/c/540e180fe892) in Minutes)
 - You have read and understood the basic CapRover documentation
 - You have ssh access to you CapRover server
 
@@ -46,4 +46,4 @@ The following assumptions are made about your environment:
 - Open a ssh sessiomn to `demo-django` and create a superuser by executing `python manage.py createsuperuser`
 
 # Support
-If you want professional support with this or other Django related issues, like integrating GitLab CICD with CapRover and DigitalOcean feel free to [contact us](https://kamner.de/contact).
+If you want professional support with this or other Django related issues, like integrating GitLab CICD with CapRover and DigitalOcean feel free to [contact us](https://kamner.de).
