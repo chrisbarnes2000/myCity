@@ -32,6 +32,7 @@ class ResourceCollectionViewCell: UICollectionViewCell {
         
         textResource.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(textResource)
+        textResource.textColor = UIColor(named: "myCityBlue")
         textResource.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         textResource.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
         

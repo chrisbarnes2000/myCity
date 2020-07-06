@@ -12,6 +12,9 @@
 		3F01961C24A1BA1200EA4323 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01961B24A1BA1200EA4323 /* NetworkManager.swift */; };
 		3F01961F24A1BC3400EA4323 /* LawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01961D24A1BC3400EA4323 /* LawViewController.swift */; };
 		3F01962024A1BC3400EA4323 /* LawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F01961E24A1BC3400EA4323 /* LawViewController.xib */; };
+		3F0F62FF24AC2FD9001F3A77 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F62FE24AC2FD9001F3A77 /* CustomView.swift */; };
+		3F1F2F4024AE5090006DD142 /* PandemicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F2F3F24AE5090006DD142 /* PandemicViewController.swift */; };
+		3F1F2F4224AE5FFF006DD142 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F2F4124AE5FFF006DD142 /* CustomViewController.swift */; };
 		3F38D5A724AB142100D1CCBD /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A624AB142100D1CCBD /* BenefitsViewController.swift */; };
 		3F7A59DB24984CEA0064482F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DA24984CEA0064482F /* AppDelegate.swift */; };
 		3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A59DC24984CEA0064482F /* SceneDelegate.swift */; };
@@ -65,6 +68,9 @@
 		3F01961B24A1BA1200EA4323 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3F01961D24A1BC3400EA4323 /* LawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawViewController.swift; sourceTree = "<group>"; };
 		3F01961E24A1BC3400EA4323 /* LawViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LawViewController.xib; sourceTree = "<group>"; };
+		3F0F62FE24AC2FD9001F3A77 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		3F1F2F3F24AE5090006DD142 /* PandemicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandemicViewController.swift; sourceTree = "<group>"; };
+		3F1F2F4124AE5FFF006DD142 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		3F38D5A624AB142100D1CCBD /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		3F7A59D724984CEA0064482F /* myCity-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "myCity-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7A59DA24984CEA0064482F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +147,23 @@
 			path = DifferentSelects;
 			sourceTree = "<group>";
 		};
+		3F0F62FD24AC2F3D001F3A77 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				3F0F62FE24AC2FD9001F3A77 /* CustomView.swift */,
+				3F1F2F4124AE5FFF006DD142 /* CustomViewController.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		3F0F630024AC394E001F3A77 /* Pamdemic */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F2F3F24AE5090006DD142 /* PandemicViewController.swift */,
+			);
+			path = Pamdemic;
+			sourceTree = "<group>";
+		};
 		3F38D5A424AB13FC00D1CCBD /* Benefits */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,12 +203,12 @@
 		3F7A59D924984CEA0064482F /* myCity-Project */ = {
 			isa = PBXGroup;
 			children = (
+				3F0F630024AC394E001F3A77 /* Pamdemic */,
 				3F38D5A424AB13FC00D1CCBD /* Benefits */,
 				3F8B46E424A296CF002CDBDC /* Creators */,
 				3F8B46E124A27731002CDBDC /* Tab-Bar */,
 				3F01961A24A1B9BB00EA4323 /* Network Manager */,
 				3F843F67249C84C600D0F4A1 /* Container */,
-				3F843F66249C82DE00D0F4A1 /* Utils */,
 				3FEB9A18249888E100FBE64C /* Home */,
 				3FEB9A17249888D600FBE64C /* Landing */,
 				3FEB9A16249888BC00FBE64C /* Map-Finder */,
@@ -219,13 +242,6 @@
 				3F7A59FE24984CED0064482F /* Info.plist */,
 			);
 			path = "myCity-ProjectUITests";
-			sourceTree = "<group>";
-		};
-		3F843F66249C82DE00D0F4A1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		3F843F67249C84C600D0F4A1 /* Container */ = {
@@ -305,6 +321,7 @@
 		3FEB9A14249888A000FBE64C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F0F62FD24AC2F3D001F3A77 /* Custom */,
 				3FAB1A4E249F220600A6D293 /* Collection */,
 			);
 			path = Resources;
@@ -524,6 +541,7 @@
 				3F843F69249C84E800D0F4A1 /* ContainerViewController.swift in Sources */,
 				3F8165CE249BE6A8000B9365 /* HomeView.swift in Sources */,
 				3F7A59DF24984CEA0064482F /* ViewController.swift in Sources */,
+				3F0F62FF24AC2FD9001F3A77 /* CustomView.swift in Sources */,
 				3F8B46E824A2975D002CDBDC /* CreatorsViewController.swift in Sources */,
 				3F8B46EC24A29A47002CDBDC /* Section.swift in Sources */,
 				3F8B46E624A296F3002CDBDC /* Creator.swift in Sources */,
@@ -533,11 +551,13 @@
 				3F7A59DD24984CEA0064482F /* SceneDelegate.swift in Sources */,
 				3F01961724A1B11B00EA4323 /* Resources.swift in Sources */,
 				3FEB9A232498896800FBE64C /* LandingViewController.swift in Sources */,
+				3F1F2F4224AE5FFF006DD142 /* CustomViewController.swift in Sources */,
 				3F8B46F124A29B71002CDBDC /* header.swift in Sources */,
 				3F38D5A724AB142100D1CCBD /* BenefitsViewController.swift in Sources */,
 				3F8B46EF24A29B04002CDBDC /* cProfile.swift in Sources */,
 				3F01961924A1B87C00EA4323 /* CustomFlowLayout.swift in Sources */,
 				3FEB9A1F2498894200FBE64C /* HomeViewController.swift in Sources */,
+				3F1F2F4024AE5090006DD142 /* PandemicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
