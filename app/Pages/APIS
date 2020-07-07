@@ -1,0 +1,64 @@
+from census import Census
+from us import states
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+
+# -------------------YELP API RENDERING-------------------------------------
+
+        api_key = os.getenv('Yelp_KEY')
+
+        headers = {'Authorization': 'Bearer %s' % api_key}
+        url = 'https://api.yelp.com/v3/businesses/search'
+        params = {'term': 'bookstore', 'location': 'San Francisco'}
+        req = requests.get(url, params=params, headers=headers)
+
+        parsed = json.loads(req.text)
+        businesses = parsed["businesses"]
+        # for business in businesses:
+        #     id = business["id"]
+        #     url = "https://api.yelp.com/v3/businesses/" + id + "/reviews"
+        #     req = requests.get(url, headers=headers)
+        #     parsed = json.loads(req.text)
+        #     reviews = parsed["reviews"]
+        #     print("--- Reviews ---")
+
+# -----------------CENSUS API RENDERING---------------------------------------
+
+        c = Census(os.getenv('CENSUS_KEY'))
+        tracts = context['object'].tract
+        Census_House = []
+        Census_Pop = []
+        Population = 0
+        Housing = 0
+
+        for tract in tracts.split():
+            tract = tract.strip(',')
+            # Name = c.sf1.state_county_tract('NAME', states.CA.fips, '075', tract)
+            Population_json = c.sf1.state_county_tract(
+                'P001001', states.CA.fips, '075', tract)
+            pop_val = int(Population_json[0]['P001001'])
+            Census_Pop.append('{:,}'.format(pop_val))
+            Population += pop_val
+
+            Housing_json = c.sf1.state_county_tract(
+                'H001001', states.CA.fips, '075', tract)
+            house_val = int(Housing_json[0]['H001001'])
+            Census_House.append("{:,}".format(house_val))
+            Housing += house_val
+
+# -----------------Add to QuerySet---------------------------------------
+
+        # Yelp context
+        context['Businesses'] = businesses
+        # context['reviews'] = reviews
+
+        # Census context
+        # context['Census_Name'] = Name[0]['NAME'] + " 2010"
+        context['Census_Pop'] = Census_Pop
+        context['Census_House'] = Census_House
+        context['Total_Population'] = Population
+        context['Total_Housing'] = Housing
+        context['tracts'] = tracts
+        return context

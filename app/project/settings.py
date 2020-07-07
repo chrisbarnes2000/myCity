@@ -15,7 +15,7 @@ ENVIRONMENT_FLOAT = os.environ.get("ENVIRONMENT_FLOAT")
 
 
 GOOGLE_MAPS_API_KEY = os.environ.get("GOOGLE_MAPS_API_KEY")
-
+TITLE_MAX_LENGTH = 20
 
 INSTALLED_APPS = [
     "admin_honeypot",
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
 
     "utils",
+    "Pages",
 
 
 

@@ -1,6 +1,22 @@
 from django.contrib.auth.models import User, Group
 # from users.models import CustomUser as User
-from rest_framework import routers, serializers, viewsets, permissions
+from rest_framework import routers, generics, serializers, viewsets, permissions
+from Pages.models import Page
+# from Utils.models import Photo
+from rest_framework import serializers
+
+
+class PageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Page
+        fields = "__all__"
+
+
+# class PhotoSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Photo
+#         fields = "__all__"
+
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -13,6 +29,24 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
+
+
+class PageListViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Pages to be listed.
+    """
+    queryset = Page.objects.all()
+    serializer_class = PageSerializer
+    # permission_classes = [permissions.IsAuthenticated]
+
+
+# class PageDetailViewSet(viewsets.ModelViewSet):
+#     """
+#     API endpoint that allows Page to be viewed or edited.
+#     """
+#     queryset = Page.objects.all()
+#     serializer_class = PageSerializer
+#     # permission_classes = [permissions.IsAuthenticated]
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -36,3 +70,6 @@ class GroupViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
+router.register(r'list', PageListViewSet)
+# router.register(r'<int:pk>', PageDetailViewSet)
+# router.register(r'<str:slug>', PageDetailViewSet)
