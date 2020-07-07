@@ -3,6 +3,11 @@
 Originally based on this [post](https://testdriven.io/dockerizing-django-with-postgres-gunicorn-and-nginx).
 and this Production ready Docker + Django + Bootstrap 4 starter pack. [project repo](https://github.com/ChrisBarnes7404/django-on-docker)
 
+
+Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+
+nginx (pronounced engine-x) is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.
+
 ## 📂 Project Files
 
 | Filename | Description |
