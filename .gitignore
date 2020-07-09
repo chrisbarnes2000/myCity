@@ -2,11 +2,8 @@
 __pycache
 .DS_Store
 venv
-.env.development
-.env.production
-.env.prod.db
-app/mediafiles
-
+.env
+.env.db
 
 # Created by https://www.toptal.com/developers/gitignore/api/xcode
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode
