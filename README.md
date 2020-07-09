@@ -7,7 +7,7 @@
 
 # myCity
 <!-- ## [PROJECT PROPOSAL](Docs/Proposal.md)     &       [PROJECT SCORING](Docs/Rubric-Scoring.md) -->
-![image](app/static/img/myCityLogo.png)
+![image](static/img/myCityLogo.png)
 
 
 ## Description
@@ -24,3 +24,16 @@ Over all, myCity is an educational app that keeps you informed of:
 
 ## Want to Contribute to this project or learn how to build one similar?
 ### Read into it's [Dependants](Docs/Dependants.md) and follow the [Contribution/User Instructions](Docs/Instructions.md)
+
+
+### Run Locally
+```sh
+$ docker-compose up --build
+```
+
+Test it out at [http://localhost:8000](http://localhost:8000).
+
+### Stop The Local Server
+```sh
+$ docker-compose down
+```

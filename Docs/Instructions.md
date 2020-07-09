@@ -6,11 +6,11 @@
 - Learn the [Difference Between Clone and Fork](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/)
 - Then follow these instructions to [Fork and Clone](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this repo
 
-## Next Set up the environment
+<!-- ## Next Set up the environment
 
 Look for these files to change
 
-<!-- ![image](static/img/docs/look-for-me.jpeg) -->
+<!-- ![image](static/img/docs/look-for-me.jpeg) ->
 if the .env files below don't exist then run
 ```Bash
 $ touch filename
@@ -19,7 +19,7 @@ $ touch filename
 1. Rename `*.env.dev-sample*` to `*.env.development*`.
 2. Update the environment variables (ask team lead for new values) in the `*docker-compose.yml*` and `*.env.development* files`.
 3. Add a folder titled `mediafiles` to the `apps` directory
-4. Build the images and run the containers:
+4. Build the images and run the containers: -->
 
 
 # Development
@@ -88,7 +88,7 @@ Command Short Cuts used below
 Repeat branching and update your team and progress tracker
 
 
-# Production
+<!-- # Production
 
 Uses gunicorn + nginx.
 
@@ -104,6 +104,6 @@ Uses gunicorn + nginx.
 ### Stop The Server
 ```sh
 $ docker-compose down
-```
+``` -->
 
 ## Other Docker [Commands](Docs/Docker-comands.md)
