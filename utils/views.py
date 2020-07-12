@@ -59,6 +59,9 @@ def success(request):
     return HttpResponse('successfully uploaded')
 
 
+def health_resources(request):
+    return render(request, "helth_resources.html", {})
+
 # class Create_Photo_View(CreateView):
 #     model = Photo
 #     fields = ['first_name', 'last_name',

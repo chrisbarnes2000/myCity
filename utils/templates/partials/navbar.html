@@ -12,18 +12,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav m-auto" id="myNav">
                 {% comment %} <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'image-upload' %}">Contribute Photo</a></li> {% endcomment %}
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="https://sf.gov/topics/coronavirus-covid-19">SF Pandemic Info</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'benefits' %}">Benefits</a></li>
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'legal-help' %}">Legal Help</a></li>
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="https://sf.gov/topics/coronavirus-covid-19">SF Pandemic Info</a></li>
-                {% comment %} {% url 'pandemic-info' %} {% endcomment %}
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'shelter-info' %}">Shelter Info</a></li>
 
-{% comment %}
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'shelter-info' %}">Shelters</a></li>
-                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'food-locations' %}">Food</a></li>
- {% endcomment %}
-
-                <li class="nav-item d-flex justify-content-end">
+                {% comment %}<li class="nav-item d-flex justify-content-end">
                     {% if user.is_staff %}
                         <a class="nav-link" href="/ACP/"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
                         <a href="/ACP/logout/" class="btn btn-danger">Log Out</a>
@@ -32,9 +27,9 @@
                         <a class="nav-link" href="{% url 'account_logout' %}"" class="btn btn-danger">Log Out</a>
                     {% else %}
                         <a class="nav-link" href="{% url 'account_login' %}" class="btn btn-secondary">Log In</a>
-                        <a class="nav-link" href="{% url 'account_signup' %}" class="btn btn-secondary">Sign Up</a> {% endcomment %}
+                        <a class="nav-link" href="{% url 'account_signup' %}" class="btn btn-secondary">Sign Up</a>
                     {% endif %}
-                </li>
+                </li> {% endcomment %}
             </ul>
 {% comment %}
 <!--  -->

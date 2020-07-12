@@ -39,7 +39,7 @@ urlpatterns = [
     path('Legal-help/', legal_help, name='legal-help'),
     # Creators Page
     # path('pandemic-info/', pandemic_info, name='pandemic-info'),
-
+    path('Health_resources/', health_resources, name='health_resources'),
 
     # Pages urls
     path('Pages/', include('Pages.urls')),
