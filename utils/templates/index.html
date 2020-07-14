@@ -15,18 +15,24 @@
         src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a> {% endcomment %}
     <div class="col float-left mt-5">
         <h2><b>myCity</b> is an educational app that keeps you informed of:</h2>
-        <ul>
-            <li>Your legal rights & local laws over at <a href="{% url 'legal-help' %}">Legal Help</a>
-            <br>(providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained)</li>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Your legal rights & local laws over at <a href="{% url 'legal-help' %}">Legal Help</a>
+            <br>Providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained.</li>
             
-            <li>Available support resources over at <a href="{% url 'resources' %}">Resources</a>
-            <br>(govt agencies, non-profits, and local businesses that help with things such as 
-            <br> - medical info, addiction recovery resources, access to food, housing, etc)
+            <li class="list-group-item">Available support resources over at <a href="{% url 'resources' %}">Resources</a>
+            <br><bold>Government agencies, non-profits, and local businesses that help with things such as 
+            <br> <ul>
+                <li>Medical Info</li> 
+                <li>Addiction Recovery Resources</li>
+                <li>Access to Food</li>
+                <li>Housing, etc</li>
             </li>
-            
-            <li>Later we plan to allow for Instantly submitting and track <a href="{% url 'benefits' %}">Benefits</a> applications via mobile app and mobile/user-friendly website. 
-            <br>(It’s the get calfresh for all benefits.) 
+        </bold>
+        </ul>
+            <li class="list-group-item">Later we plan to allow for Instantly submitting and track <a href="{% url 'benefits' %}">Benefits</a> applications via mobile app and mobile/user-friendly website. 
+            <br>(It’s the get calfresh for all benefits.)
             </li> 
+            </ul>
         </p>
 
         <hr>
