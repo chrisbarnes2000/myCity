@@ -23,11 +23,11 @@ class ResourceViewController: UIViewController {
     }()
     
     let resources: [Resource] = [
-        Resource(name: "Better Help", image: ""),
-        Resource(name: "Benefits", image: ""),
-        Resource(name: "Shelters", image: ""),
-        Resource(name: "Food", image: ""),
-        Resource(name: "Legal Help", image: "")
+        Resource(name: "Health", image: "ggb", url: "http://my-city.dev.my-city.club/Health_resources/"),
+        Resource(name: "Benefits", image: "ggb", url: "http://my-city.dev.my-city.club/Benefits/"),
+        Resource(name: "Shelters", image: "ggb", url: "http://my-city.dev.my-city.club/Shelter-info/"),
+        Resource(name: "Food", image: "ggb", url: "http://my-city.dev.my-city.club/Food-locations/"),
+        Resource(name: "Legal Help", image: "", url: "http://my-city.dev.my-city.club/Legal-help/")
     ]
 
     override func viewDidLoad() {
@@ -53,8 +53,14 @@ extension ResourceViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+//        let cell = resourceCollection.cellForItem(at: indexPath) as! ResourceCollectionViewCell
+        let vc = ResourceWebViewController()
+        let resource = resources[indexPath.row]
+        print(resource)
+        vc.pageTitle = resource.name
+        vc.urlSet = resource.url
         print("Selected an Item")
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

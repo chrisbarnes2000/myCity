@@ -11,4 +11,5 @@ import Foundation
 struct Resource {
     let name: String
     let image: String
+    let url: String
 }
