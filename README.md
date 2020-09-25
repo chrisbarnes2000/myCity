@@ -1,7 +1,7 @@
 <!-- <p align="center">
 <strong style="color: red;">❌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STOP: DO NOT CLONE THIS REPO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;❌</strong>
 <br><b>Carefully</b> follow the instructions <a href="Docs/Instructions.md">Here</a> to ensure your contributions are tracked correctly.</p> -->
-
+.
 [![GitHub](https://img.shields.io/github/forks/ChrisBarnes7404/myCity.svg?style=flat-square)](https://github.com/ChrisBarnes7404/myCity/network)
 [![GitHub](https://img.shields.io/github/issues/ChrisBarnes7404/myCity.svg?style=flat-square)](https://github.com/ChrisBarnes7404/myCity/issues)
 
