@@ -1,6 +1,5 @@
 # docker-flask
 
-
 ## HOW TO START THIS PROJECT
 
 > $ Python3 Flask Run
@@ -9,9 +8,10 @@
 
 To play the game, users will need to utilizes the on-screen controls. Their interactions will be limited to the button options available being checked for incorrect responses and then handled accordingly, either by re-prompting the user for a correct input or by wasting their chance, given the importance or value of the interaction.
 
-### PURPOSE OF PROJECT/USER JOURNEY/PERSONAS: 
+### PURPOSE OF PROJECT/USER JOURNEY/PERSONAS:
 
 #### [Digital MockUP](https://docs.google.com/document/d/1hIQi0rbLYB8FXy6J24mUi87Pi5o5Vl7tawzf0UjveRc/edit?usp=sharing)
+
 #### [Personas](https://docs.google.com/document/d/1TzHsugJ98LDXU47hu6UyvaQSXcsQ_TI39z7hoLXYX88/edit?usp=sharing)
 
 #### User Journey
