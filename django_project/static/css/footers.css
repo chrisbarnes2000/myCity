@@ -1,0 +1,23 @@
+/* FOOTER */
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;            /* Footer height */
+}
+
+.footer-copyright{
+    font-size: large;
+    font-weight: 500;
+    padding-top: 1.5em;
+}
+
+.footer-alink {
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.footer-alink:hover {
+    text-shadow: 2px 2px 5px #707070;
+    color: black;
+}

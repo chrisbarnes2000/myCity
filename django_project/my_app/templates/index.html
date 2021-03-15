@@ -1,0 +1,61 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<h1 class="text-center mb-5"><b>Welcome to myCity!</b></h1>
+<div class="row d-flex">
+    <!-- <div class="col text-center embed-responsive embed-responsive-16by9 float-right">
+        <video class="video-fluid" width="480" height="360" controls>
+            <source src="{% static 'videos/splash.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>  -->
+    <img src="{% static 'img/Helping.JPEG' %}" class="img-fluid" style="width: 50%; float: left;" />
+    {% comment %} <a href="https://placeholder.com"><img class=img-fluid" style="width: 100%; float: left;"
+        src="https://via.placeholder.com/250x250?text=Image+of+this+place" alt="Place Holder Image" /></a> {% endcomment %}
+    <div class="col float-left mt-5">
+        <h2><b>myCity</b> is an educational app that keeps you informed of:</h2>
+        <ul class="list-group list-group-flush">
+            <!-- legal-help -->
+            <li class="list-group-item">Your legal rights & local laws over at <a href="{% url 'index' %}">Legal Help</a>
+            <br>Providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained.</li>
+            <!-- resources -->
+            <li class="list-group-item">Available support resources over at <a href="{% url 'index' %}">Resources</a>
+            <br><bold>Government agencies, non-profits, and local businesses that help with things such as 
+            <br> <ul>
+                <li>Medical Info</li> 
+                <li>Addiction Recovery Resources</li>
+                <li>Access to Food</li>
+                <li>Housing, etc</li>
+            </li>
+        </bold>
+        </ul>
+            <!-- benefits -->
+            <li class="list-group-item">Later we plan to allow for Instantly submitting and track <a href="{% url 'index' %}">Benefits</a> applications via mobile app and mobile/user-friendly website. 
+            <br>(It’s the get calfresh for all benefits.)
+            </li> 
+            </ul>
+        </p>
+
+        <hr>
+
+        <p>For more information <a href="{% url 'creators' %}">about the Creators</a> please visit this link.</p>
+
+    </div>
+</div>
+{% comment %}
+<!-- <div class="row">
+    <form action="{% url 'subscribe' %}" method="POST">{% csrf_token %}
+        <div class="row">
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Subscribe" name="{{ form.sub.name }}" id="id_{{ form.sub.name }}">
+            </div>
+            <div class="col">
+                <input type="submit" name="Subscribe" class='btn btn-success'>
+            </div>
+        </div>
+    </form>
+</div> -->
+{% endcomment %}
+
+{% endblock %}

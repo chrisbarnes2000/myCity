@@ -1,0 +1,63 @@
+<!-- NAVBAR -->
+{%load static%}
+{% comment %} {% load socialaccount %} {% endcomment %}
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <img src="{% static 'img/myCityLogo.png' %}" class="img-fluid" style="width: 50px; height: 50px;" />
+    <a class="navbar-brand" href="{% url 'index' %}" style="margin-left: 1em;">myCity</a>
+    <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav m-auto" id="myNav">
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="https://sf.gov/topics/coronavirus-covid-19">SF Pandemic Info<i class="fas fa-external-link-alt"></i></a></li>
+                {% comment %}
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'image-upload' %}">Contribute Photo</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'benefits' %}">Benefits</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'legal-help' %}">Legal Help</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{% url 'shelter-info' %}">Shelter Info</a></li>
+                {% endcomment %}
+
+                {% comment %}<li class="nav-item d-flex justify-content-end">
+                    {% if user.is_staff %}
+                        <a class="nav-link" href="/ACP/"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
+                        <a href="/ACP/logout/" class="btn btn-danger">Log Out</a>
+                    {% comment %} {% elif user.is_authenticated %}
+                        <a class="nav-link" href="{% url 'profile' user %}"><div class="text-black">Hello, <strong>{{ user }}</strong>!</div></a>
+                        <a class="nav-link" href="{% url 'account_logout' %}"" class="btn btn-danger">Log Out</a>
+                    {% else %}
+                        <a class="nav-link" href="{% url 'account_login' %}" class="btn btn-secondary">Log In</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}" class="btn btn-secondary">Sign Up</a>
+                    {% endif %}
+                </li> {% endcomment %}
+            </ul>
+{% comment %}
+<!--  -->
+{% endcomment %}
+            <form class="form-inline my-2 my-lg-0 float-right">
+                <div class="input-group">
+                <div class="input-group-prepend">
+                    <label for="myInput" class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-search-location"></i>
+                    </label>
+                </div>
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1"
+                    onkeyup="filter()" onfocus="show_items()" id="myInput"> <!-- onblur="show_items()" -->
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="menuItems">
+                        {% comment %}
+                        <a href="{% url 'benefits' %}">Benefits</a>
+                        <a href="{% url 'shelter-info' %}">Shelters</a>
+                        <a href="{% url 'food-locations' %}">Food</a>
+                        <a href="{% url 'legal-help' %}">Legal Help</a>
+                        {% endcomment %}
+                    </div>
+                <div style="display:none;" class="dropdown-header dropdown_empty">No entry found</div>
+            </div>
+            </form>
+        </div>  <!-- end nav bar colapse -->
+    </div>   <!-- end containter -->
+</nav>

@@ -1,0 +1,40 @@
+/* FA EDIT */
+.socials {
+    align-content: end;
+    padding-inline-start: 0;
+}
+
+.fa-edit {
+    margin-left: 0.5em;
+    font-size: xx-large;
+    color: red;
+}
+
+.fa-trash {
+    font-size: xx-large;
+    color: red;
+}
+
+.fa-street-view, .fa-home, .fa-money, .fa-user-md, .fa-envira, .fa-drumstick-bite, .fa-external-link-alt {
+    font-size: x-large;
+}
+
+.fa-facebook {
+    padding: auto;
+    color: lightblue;
+}
+
+.fa-twitter {
+    padding: auto;
+    color: lightblue;
+}
+
+.fa-youtube {
+    padding: auto;
+    color: red;
+}
+
+.fa-instagram {
+    padding: auto;
+    color: coral;
+}

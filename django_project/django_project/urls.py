@@ -15,9 +15,39 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from my_app import views
+from my_app.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index)
+    path("", index, name='index'),
+
+    # Accounts app
+    # path('Users/', include('django.contrib.auth.urls')),
+
+    # Creators Page
+    path('Creators/', creators, name='creators'),
+
+    # Resources Page
+    # path('Resources/', resources, name='resources'),
+
+    # Resources Page
+    # path('benefits/', benefits, name='benefits'),
+
+    # Shelter Page
+    # path('Shelter-info/', shelter_info, name='shelter-info'),
+
+    # Food Page
+    # path('Food-locations/', food_locations, name='food-locations'),
+
+    # Legal Page
+    # path('Legal-help/', legal_help, name='legal-help'),
+
+    # Pandemic Page
+    # path('pandemic-info/', pandemic_info, name='pandemic-info'),
+
+    # Health Page
+    # path('Health_resources/', health_resources, name='health_resources'),
+
+    # Success Page for redirects
+    # path('Success/', success, name='success'),
 ]

@@ -13,6 +13,8 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+
+    'whitenoise.runserver_nostatic',
     "django.contrib.staticfiles",
 
     # Add your apps here
@@ -94,4 +96,3 @@ if os.environ.get("CAPROVER") is None:
     from .settings_dev import *
 else:
     from .settings_caprover import *
-
