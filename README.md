@@ -1,6 +1,7 @@
 # CapRover Django
 
 This project template aims to provide a more real-world Django template including:
+
 - PostgreSQL
 - Instructions for CapRover setup
 - Handling of Django settings
@@ -18,6 +19,7 @@ You may change this names to your liking
 ## 1) Assumptions
 
 The following assumptions are made about your environment:
+
 - You have a working CapRover (Get one deployed on [DigitalOcean](https://m.do.co/c/540e180fe892) in Minutes)
 - You have read and understood the basic CapRover documentation
 - You have ssh access to you CapRover server
@@ -30,7 +32,8 @@ The following assumptions are made about your environment:
 
 - Create a new blank app with the name `demo-django`
 - Fill the environment variables below and enter them with the bulk edit mode
-    ```
+
+    ```zsh
     CAPROVER=True
     CR_SECRET_KEY=YOUR_KEY
     CR_HOSTS=demo-django.YOUR_CAPROVER_DOMAIN,CUSTOM_DOMAIN
@@ -42,8 +45,10 @@ The following assumptions are made about your environment:
     ```
 
 ## 3) Django
+
 - Deploy the code from this repository with your method of choice to `demo-django`
 - Open a ssh sessiomn to `demo-django` and create a superuser by executing `python manage.py createsuperuser`
 
 # Support
+
 If you want professional support with this or other Django related issues, like integrating GitLab CICD with CapRover and DigitalOcean feel free to [contact us](https://kamner.de).

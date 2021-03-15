@@ -7,8 +7,13 @@ from django.core.exceptions import ImproperlyConfigured
 from .settings import BASE_DIR
 
 # key and debugging settings should not changed without care
-SECRET_KEY = os.environ.get("CR_SECRET_KEY") or ImproperlyConfigured("CR_SECRET_KEY not set")
 DEBUG = False
+SECRET_KEY = os.environ.get("CR_SECRET_KEY") or ImproperlyConfigured("CR_SECRET_KEY not set")
+ENVIRONMENT_NAME = os.environ.get("ENVIRONMENT_NAME") or ImproperlyConfigured("ENVIRONMENT_NAME not set")
+ENVIRONMENT_COLOR = os.environ.get("ENVIRONMENT_COLOR") or ImproperlyConfigured("ENVIRONMENT_COLOR not set")
+ENVIRONMENT_FLOAT = os.environ.get("ENVIRONMENT_FLOAT") or ImproperlyConfigured("ENVIRONMENT_FLOAT not set")
+# ENVIRONMENT_ADMIN_SELECTOR = os.environ.get("ENVIRONMENT_ADMIN_SELECTOR")
+
 
 # allowed hosts get parsed from a comma-separated list
 hosts = os.environ.get("CR_HOSTS") or ImproperlyConfigured("CR_HOSTS not set")
