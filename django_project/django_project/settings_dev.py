@@ -6,10 +6,8 @@ from django.core.exceptions import ImproperlyConfigured
 
 from .settings import BASE_DIR
 
-print("\n\n------NEW DEV RUN------")
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "nzcm$_84@4qd6e^#yinut58p%r0+qlveqjcg8@7rvq@-t)zxv1"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

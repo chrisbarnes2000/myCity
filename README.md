@@ -52,3 +52,9 @@ The following assumptions are made about your environment:
 # Support
 
 If you want professional support with this or other Django related issues, like integrating GitLab CICD with CapRover and DigitalOcean feel free to [contact us](https://kamner.de).
+
+<!-- ## Look Into -->
+
+<!-- [`django-environ`](https://github.com/joke2k/django-environ) -->
+<!-- [`django-dotenv`](https://github.com/jpadilla/django-dotenv) -->
+<!-- [Caprover | Set Up some Environmental Variables](https://www.youtube.com/watch?v=pIF5B-D8jD4&t=1337s) -->
