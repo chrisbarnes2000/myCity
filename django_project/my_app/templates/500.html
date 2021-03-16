@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<h1 class="text-center mb-5"><b>myCity 500 Error Page!</b></h1>
+<div class="row d-flex">
+    <h1>You Found An Error On Our Site, Send us a message about it</h1>
+    <a href="{% url 'index' %}">Go To Our Home Page</a>
+</div>
+{% comment %}
+<!-- <div class="row">
+    <form action="{% url 'subscribe' %}" method="POST">{% csrf_token %}
+        <div class="row">
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Subscribe" name="{{ form.sub.name }}" id="id_{{ form.sub.name }}">
+            </div>
+            <div class="col">
+                <input type="submit" name="Subscribe" class='btn btn-success'>
+            </div>
+        </div>
+    </form>
+</div> -->
+{% endcomment %}
+
+{% endblock %}

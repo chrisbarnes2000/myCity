@@ -14,10 +14,15 @@ ENVIRONMENT_COLOR = os.environ.get("ENVIRONMENT_COLOR") or ImproperlyConfigured(
 ENVIRONMENT_FLOAT = os.environ.get("ENVIRONMENT_FLOAT") or ImproperlyConfigured("ENVIRONMENT_FLOAT not set")
 ENVIRONMENT_ADMIN_SELECTOR = os.environ.get("ENVIRONMENT_ADMIN_SELECTOR")
 
+print("\n\n New Run of The Production Settings")
+print(DEBUG, ENVIRONMENT_NAME)
+
+
 # allowed hosts get parsed from a comma-separated list
 hosts = os.environ.get("CR_HOSTS") or ImproperlyConfigured("CR_HOSTS not set")
 try:
     ALLOWED_HOSTS = hosts.split(",")
+    print(ALLOWED_HOSTS)
 except:
     raise ImproperlyConfigured("CR_HOSTS could not be parsed")
 
