@@ -25,6 +25,6 @@ EXPOSE 5000
 
 # STEP 7: Run Flask!
 # For example, to check every five minutes or so that a web-server is able to serve the site’s main page within three seconds:
-HEALTHCHECK --interval=5m --timeout=3s \
-    CMD curl -f http://localhost/ || exit 1
+# HEALTHCHECK --interval=5m --timeout=3s \
+#     CMD curl -f http://localhost/ || exit 1
 CMD ["flask", "run", "--host=0.0.0.0"]
