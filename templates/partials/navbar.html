@@ -1,0 +1,44 @@
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <img src="static/img/myCityLogo.png" class="img-fluid" style="width: 50px; height: 50px;" />
+    <a class="navbar-brand" href="{{ url_for('index') }}" style="margin-left: 1em;">myCity</a>
+    <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav m-auto" id="myNav">
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="https://sf.gov/topics/coronavirus-covid-19">
+                    SF Pandemic Info&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
+                    <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{{ url_for('benefits') }}">Benefits</a></li>
+                    <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{{ url_for('food') }}">Food</a></li>
+                    <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{{ url_for('legal') }}">Legal</a></li>
+                    <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{{ url_for('health') }}">Medical</a></li>
+                <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{{ url_for('shelters') }}">Shelter</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 float-right">
+                <div class="input-group">
+                <div class="input-group-prepend">
+                    <label for="myInput" class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-search-location"></i>
+                    </label>
+                </div>
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1"
+                    onkeyup="filter()" onfocus="show_items()" id="myInput"> <!-- onblur="show_items()" -->
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="menuItems">
+                        <a href="{{ url_for('benefits') }}">Benefits</a>
+                        <a href="{{ url_for('food') }}">Food Support</a>
+                        <a href="{{ url_for('legal') }}">Legal Help</a>
+                        <a href="{{ url_for('health') }}">Medical Help</a>
+                        <a href="{{ url_for('shelters') }}">Local Shelters</a>
+                    </div>
+                <div style="display:none;" class="dropdown-header dropdown_empty">No entry found</div>
+            </div>
+            </form>
+        </div>  <!-- end nav bar colapse -->
+    </div>   <!-- end containter -->
+</nav>

@@ -4,35 +4,65 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(404)
+def internal_server_issue_page(e):
+    # note that we set the 500 status explicitly
+    return render_template('500.html'), 500
+
+
 @app.route('/')
 @app.route('/index')
-def start():
-    """Show the Start page."""
-    return render_template('start_page.html')
+def index():
+    """Show the Index page."""
+    return render_template('index.html')
 
 
-@app.route('/load')
-def loadgame():
-    """Show the load game page."""
-    return render_template('load_game.html')
+@app.route('/benefits')
+def benefits():
+    """Show the benefits page."""
+    return render_template('benefits.html')
 
 
-@app.route('/save')
-def save():
-    """Show the Save Game Page."""
-    return render_template('save_game.html')
+@app.route('/creators')
+def creators():
+    """Show the creators page."""
+    return render_template('creators.html')
 
 
-@app.route('/play')
-def gameplay():
-    """Show the game play page."""
-    return render_template('game.html')
+@app.route('/food')
+def food():
+    """Show the food-info page."""
+    return render_template('food_locations.html')
 
 
-@app.route('/inventory')
-def inventory():
-    """Show all items via the inventory page."""
-    return render_template('inventory.html')
+@app.route('/health')
+def health():
+    """Show the health-info page."""
+    return render_template('health_resources.html')
+
+
+@app.route('/legal')
+def legal():
+    """Show the legal-help page."""
+    return render_template('legal_help.html')
+
+
+@app.route('/resources')
+def resources():
+    """Show the resources page."""
+    return render_template('resources.html')
+
+
+@app.route('/shelters')
+def shelters():
+    """Show the shelter-info page."""
+    return render_template('shelter_info.html')
 
 
 if __name__ == '__main__':

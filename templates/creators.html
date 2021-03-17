@@ -1,0 +1,83 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+
+{% block title %}Creators of myCity{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-5 pt-5">
+        <img src="static/img/creators/creator_bg.png" alt="Creator Back ground" class="img-fluid" style="width: 100%; float: left;" />
+    </div>
+    <div class="col-7">
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-auto mt-3">
+                    <img src="static/img/creators/Chris.png" class="card-image img-fluid" alt="Creator">
+                </div>
+                <div class="col">
+                    <div class="card-block px-2">
+                        <h4 class="card-title">PM, Front & Back End Developer</h4>
+                        <p class="card-text">
+                            Chris is a computer science student at Make School following the concentrations Data Science & Back End Web Development.<br>
+                            He enjoys working in the STEM fields and had a blast as a <a href="https://www.firstinspires.org/robotics/frc">FRC</a>
+                            <i class="fas fa-external-link-alt"></i>
+                            programmer from 2015-2019 on team <a href="https://frc-events.firstinspires.org/team/2927">2927</a>
+                            <i class="fas fa-external-link-alt"></i>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-auto mt-3">
+                    <img src="static/img/creators/Gideon.png" class="card-image img-fluid" alt="Creator">
+                </div>
+                <div class="col">
+                    <div class="card-block px-2">
+                        <h4 class="card-title">Reseacher and Outreach lead, also Front End Developer</h4>
+                        <p class="card-text">
+                        Gideon is an adult student at Make School learning full stack web development with a focus on the front-end. He’s caught the coding bug and is looking forward to applying his new-found skills towards building applications that enhance people’s lives and contribute towards making the world a better place. You can view some of his early work as an engineering student <a href="https://www.makeschool.com/portfolio/gideon-crawley">here</a> <i class="fas fa-external-link-alt"></i>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-auto mt-3">
+                    <img src="static/img/creators/Ben.jpeg" class="card-image img-fluid" alt="Creator">
+                </div>
+                <div class="col">
+                    <div class="card-block px-2">
+                        <h4 class="card-title">Reseacher, Front End, and Mobile Developer</h4>
+                        <p class="card-text">
+                        Ben is an IOS developer at Make School focusing on swift development and working on full-stack web development processes. He has made a couple applications that use the development of API’s and created software to process data from apple’s news site data. With his upbeat attitude, Ben wants his focus to be on helping those less fortunate and build better resources in the hope of giving people a chance to build a better life for themselves.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-auto mt-3">
+                    <img src="static/img/creators/Henry.jpeg" class="card-image img-fluid" alt="Creator">
+                </div>
+                <div class="col">
+                    <div class="card-block px-2">
+                        <h4 class="card-title">Reseacher, Front End, and Mobile Developer</h4>
+                        <p class="card-text">
+                        Henry is an iOS developer at the Make School Product college. Focusing time into mobile development, he works on building the UI for a number of different projects ranging from consumer based applications, mobile games, to educational / resources apps that would assist others. Always looking for an opportunity, he is furthering his goals by looking into data science and beyond the simple scope of mobile alone. His primary goal is to work on and build projects that would bring happiness to other people, no matter the format. With this project, he hopes to further help others, and also help develop his skills beyond the current strain by working out building a custom API that a mobile app could work with as well as making a project that works between two different formats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="row justify-content-center mt-3">
+    <p>
+        If you have any comments, concerns, or ideas for improvements on this site <a href="{{ url_for('index') }}">Contact us</a>
+    </p>
+</div> -->
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} 500 Error Page {% endblock %}
+
+{% block content %}
+    <img src="static/img/myCityLogo.png" class="img-fluid" style="width: 50%; float: left;" />
+    <h1>500 Error :(</h1>
+    <p>Server is having issues or your not suppose to be here.<p>
+    <a href="{{ url_for('index') }}">go somewhere nice</a>
+{% endblock %}

@@ -1,0 +1,156 @@
+@import "nav.css";
+@import "footers.css";
+@import "font-awsome.css";
+
+/* Main Layout */
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 7rem;    /* Footer height */
+}
+
+.submit {
+    background-color: #141414;
+    color: #fff;
+}
+
+.ul {
+    padding-left: none;
+}
+
+/* Fonts */
+p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0px;
+}
+
+small {
+    font-size: 45% !important;
+    text-transform: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+}
+
+h3 {
+    position: absolute;
+    border: 1px solid white;
+    width: 225px;
+    height: 50px;
+    background-color: lightgray;
+    opacity: 1;
+    color: white;
+}
+
+label {
+    color: red;
+}
+
+/* Images */
+img {
+    width: 100%;
+    height:100%;
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.columns img {
+    margin: 8px 8px;
+}
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.43;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 0;
+  border: 1px solid #707070;
+  box-shadow: 0px 3px 7px -1px rgba(203, 203, 203, 1);
+}
+
+.form-group>.col-sm {
+  padding: none;
+}
+
+
+/* Card -> Log in*/
+
+.card{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 75%;
+}
+.card-header {
+    color: black;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+    color: white;
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn {
+    color: black;
+}
+
+.login_btn:hover {
+    color: #707070;
+    background-image: white;
+}
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 4px;
+}

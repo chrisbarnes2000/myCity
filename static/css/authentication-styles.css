@@ -1,0 +1,70 @@
+html,body{
+    background-image: url('staticfiles/img/authentication/Log-In.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+}
+
+.card-header h3{
+    color: black;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    color: black;
+    border:0 !important;
+}
+
+input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.remember{
+    color: black;
+}
+
+.remember input{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn{
+    color: black;
+    width: 100px;
+}
+
+.login_btn:hover{
+    color: rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+.links{
+    color: black;
+}
+
+.links a{
+    margin-left: 4px;
+}
+
+.login-group {
+        flex-direction: column;
+}
+
+.login-group > input {
+        width: min-content;
+        margin-left: 40px;
+}
