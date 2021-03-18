@@ -1,25 +1,93 @@
-# docker-flask
+<p align="center">
+    <strong style="color: red;">❌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STOP: DO NOT CLONE THIS REPO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;❌</strong>
+    <br><b>Carefully</b> follow the instructions <a href="Docs/Instructions.md">Here</a> to ensure your contributions are tracked correctly.
+    <br><br><img src="static/img/myCityLogo.png" alt="logo">
+</p>
 
-## HOW TO START THIS PROJECT
+# [myCity](https://my-city.club)
 
-> $ Python3 Flask Run
+## Description
 
-### USER INSTRUCTIONS:
+An educational app to keep users informed of legal rights & local laws as well as available support resources nearby
 
-To play the game, users will need to utilizes the on-screen controls. Their interactions will be limited to the button options available being checked for incorrect responses and then handled accordingly, either by re-prompting the user for a correct input or by wasting their chance, given the importance or value of the interaction.
+- **Your legal rights & local laws**:
+  - (providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained)
 
-### PURPOSE OF PROJECT/USER JOURNEY/PERSONAS:
+- **Available support resources**:
+  - govt agencies,
+  - non-profits,
+  - local businesses
+  - and other places that help with things such as:
+    - medical info,
+    - recovery resources,
+    - access to food,
+    - housing,
+    - etc
 
-#### [Digital MockUP](https://docs.google.com/document/d/1hIQi0rbLYB8FXy6J24mUi87Pi5o5Vl7tawzf0UjveRc/edit?usp=sharing)
+- Later we plan to allow for **Instantly submitting and track benefits** applications via mobile app and mobile/user-friendly website. (It’s the get calfresh for all benefits.)
 
-#### [Personas](https://docs.google.com/document/d/1TzHsugJ98LDXU47hu6UyvaQSXcsQ_TI39z7hoLXYX88/edit?usp=sharing)
+## 📂 Project Files
 
-#### User Journey
+| Filename             | Description                                                                |
+| -------------------- | -------------------------------------------------------------------------- |
+| `.gitignore`         | General ignore file. Optimized for Python.                                 |
+| `.dockerignore`      | A list of files that will not be copied during build.                      |
+| `captain-definition` | **DO NOT MODIFY.** Used by CapRover for deployment.                        |
+| `Dockerfile`         | **Implement solutions in this file**.                                      |
+| `README.md`          | Replace this `README` with content describing the purpose of your project. |
 
-“I wish to play an old-RPG-style game. I have looked but with all the new technology all the old classics have been ‘innovated to the latest HD experience’. Then I stumbled upon the remake of dungeon heroes.”
+## [PROJECT PROPOSAL](Docs/Proposal.md)     &       [PROJECT SCORING](Docs/Rubric-Scoring.md)
 
-“I was looking for cool ASCII art designs for my website and came across this game, I was curious to see what characters they had and I've just become enveloped in how awesome of a game it actually is. “
+## Resources
 
-“I love how the store is based solely on in-game currencies and how easier it is to navigate via on-screen support or keyboard controls. Plus the store NPC has a nice personable attitude added to its dialog.”
+- Other Docker [Commands](Docs/Docker-comands.md)
+- Learn the [Difference Between Clone and Fork](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/)
+- [emojipedia](https://emojipedia.org/)
+- [`Final Project (Dockerizing Django)`](https://docs.google.com/document/d/1v2SHghK2yvD-XCEolZETN6q4UPtL1Sai_jRH1ROh21Q/edit#)
+- [`Spring Intensive 2.3 Proposal`](https://docs.google.com/document/d/1y7tC2fXuBbh0znymnoryIb7qaR-2ImK9_4I9IKvUKdA/edit?usp=sharing)
 
-##### AUTHORS: Chris Barnes
+# Read The [Instructions On How To Contribute](Docs/Instructions.md)
+
+## Contributors [![GitHub](https://img.shields.io/github/forks/ChrisBarnes2000/myCity.svg?style=flat-square)](https://github.com/ChrisBarnes2000/myCity/network) [![GitHub](https://img.shields.io/github/issues/ChrisBarnes2000/myCity.svg?style=flat-square)](https://github.com/ChrisBarnes2000/myCity/issues)
+
+Anyone is welcome to contribute!
+
+<table>
+  <tr>
+    <td align="center">
+        <a href="https://github.com/ChrisBarnes2000">
+            <img src="https://avatars3.githubusercontent.com/u/25515082?s=120&v=4" width="75px;" alt="Chris Barnes"/>
+            <br />
+            <sub><b>Chirs Barnes</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/ChrisBarnes2000/myCity/commits?author=ChrisBarnes2000" title="Code">💻</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/KitsuneNoctus">
+            <img src="https://avatars3.githubusercontent.com/u/19269477?v=4&s=64" width="75px;" alt="Henry Calderon"/>
+            <br />
+            <sub><b>Henry Calderon</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/ChrisBarnes2000/myCity/commits?author=KitsuneNoctus" title="Code">💻</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/GSCrawley">
+            <img src="https://avatars3.githubusercontent.com/u/31636555?v=4&s=64" width="75px;" alt="Gideon Crawley"/>
+            <br />
+            <sub><b>Gideon Crawley</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/ChrisBarnes2000/myCity/commits?author=GSCrawley" title="Code">💻</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/bsimps01">
+            <img src="https://avatars3.githubusercontent.com/u/54187088?v=4&s=64" width="75px;" alt="Ben Simpson"/>
+            <br />
+            <sub><b>Ben Simpson</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/ChrisBarnes2000/myCity/commits?author=bsimps01" title="Code">💻</a>
+    </td>
+</table>
