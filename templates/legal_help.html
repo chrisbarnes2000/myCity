@@ -1,34 +1,35 @@
 <!-- templates/shelter_info.html -->
 {% extends 'base.html' %}
+{% from "partials/card_macro.html" import card with context %}
+{% from "partials/under_construction.html" import under_construction with context %}
 
 {% block content %}
 <h1 class="text-center mb-5">Legal Help In SF</h1>
 
-<img src="static/img/utils/construction-strip.gif" class="img-fluid" style="width: 100%;" />
-<div>
-    <img src="static/img/utils/under-construction.gif" class="img-fluid" style="width: 25%; float: left;" />
-    <img src="static/img/utils/under-construction-sign.gif" class="img-fluid mt-5 pt-4" style="width: 50%" />
-    <img src="static/img/utils/under-construction.gif" class="img-fluid" style="width: 25%; float: right;" />
-</div>
-<img src="static/img/utils/construction-strip.gif" class="img-fluid mb-5" style="width: 100%;" />
+{{ under_construction() }}
 
+{{ card(
+    'Bay Area Legal Aid - Working Together for Justice',
+    'NEED TO FIND INFORMATION FORM THIS SITE',
+    'https://baylegal.org/',
+    'LEGAL ADVICE LINE - 800-551-5554 or local #: (415) 982-1300',
+    '1800 Market Street, 3rd Floor, San Francisco, CA 94102 ',
+) }}
 
-<div>
-    <b>Bay Area Legal Aid - Working Together for Justice </b>| Home Page - <a href="https://baylegal.org/">baylegal.org</a>  <i class="fas fa-external-link-alt"></i><br>
-    <bold>LEGAL ADVICE LINE - 800-551-5554</bold><br>
-    1800 Market Street, 3rd Floor, San Francisco, CA 94102 <br>
-    <bold>Local #: (415) 982-1300</bold>
-</div>
+{{ card(
+    'The Bar Association of San Francisco Lawyer Referral and Information Services',
+    'NEED TO FIND INFORMATION FORM THIS SITE',
+    'https://www.sfbar.org/lris/online-referral/',
+    '',
+    '',
+) }}
 
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
-
-<div>
-    <bold>The Bar Association of San Francisco Lawyer Referral and Information Services: </bold><a href="https://www.sfbar.org/lris/online-referral/">https://www.sfbar.org/lris/online-referral/</a>  <i class="fas fa-external-link-alt"></i>
-</div>
-
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
-
-<a href="https://www.aclu.org/know-your-rights/stopped-by-police/">Know Your Rights Stopped by Police by ACLU.org</a>  <i class="fas fa-external-link-alt"></i>
-
+{{ card(
+    'Know Your Rights',
+    'Know Your Rights Stopped by Police by ACLU.org NEED TO FIND INFORMATION FORM THIS SITE',
+    'https://www.aclu.org/know-your-rights/stopped-by-police/',
+    '',
+    '',
+) }}
 
 {% endblock %}

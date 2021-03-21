@@ -1,0 +1,27 @@
+{% macro card(name, content, website, phone, address) %}
+
+<br />
+<br />
+<h4>{{ name }}</h4>
+<div class="row">
+  <div class="col m-4">
+    {% if content %}
+    <p>{{ content }}</p>
+    {% else %}
+    <div class="alert alert-warning" role="alert">If you see this, you forgot to add content to this card.</div>
+    {% endif %}
+    <p>
+      {% if website or phone %}
+      For more info, please <br />
+        {% if website %}Visit their website
+            <a href="{{ website }}">{{ website }}&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a><br />
+        {% endif %}
+        {% if phone %}Call {{ phone }} <br />{% endif %}
+        {% if address %}Location {{ address }} <br />{% endif %}
+      {% endif %}
+    </p>
+  </div>
+</div>
+<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%" />
+
+{% endmacro %}

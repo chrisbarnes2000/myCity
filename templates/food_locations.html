@@ -1,45 +1,56 @@
 <!-- templates/shelter_info.html -->
 {% extends 'base.html' %}
+{% from "partials/card_macro.html" import card with context %}
+{% from "partials/under_construction.html" import under_construction with context %}
 
 {% block content %}
 <h1 class="text-center mb-5">Food Locations & Help!</h1>
 
-<img src="static/img/utils/construction-strip.gif" class="img-fluid" style="width: 100%;" />
-<div>
-    <img src="static/img/utils/under-construction.gif" class="img-fluid" style="width: 25%; float: left;" />
-    <img src="static/img/utils/under-construction-sign.gif" class="img-fluid mt-5 pt-4" style="width: 50%" />
-    <img src="static/img/utils/under-construction.gif" class="img-fluid" style="width: 25%; float: right;" />
-</div>
-<img src="static/img/utils/construction-strip.gif" class="img-fluid mb-5" style="width: 100%;" />
+{{ under_construction() }}
 
-<p>The <strong>Food Pantry</strong> is serving pre-bagged groceries every Saturday starting at noon, for residents of 94107 and 94110 zip codes.  No registration or identifications needed. The address is 500 De Haro Street—and they are looking for volunteers who have not been exposed to COVID. Call 415-255-8100 for more info.   Thefoodpantry.org</p>
+{{ card(
+    'Food Pantry',
+    'The Food Pantry is serving pre-bagged groceries every Saturday starting at noon, for residents of 94107 and 94110 zip codes.  No registration or identifications needed. The address is 500 De Haro Street—and they are looking for volunteers who have not been exposed to COVID.',
+    'Thefoodpantry.org',
+    '415-255-8100',
+    ) }}
 
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
+{{ card(
+    'North Beach Citizens',
+    'North Beach Citizens offers a weekly Community Food Pantry on Wednesdays from 10:30am to 12:30pm for San Francisco residents who live in participating SROs and have identification and a rental receipt.',
+    'https://www.northbeachcitizens.org/community-food-pantry-1',
+) }}
 
-<p><strong>North Beach Citizens</strong> offers a weekly <strong>Community Food Pantry</strong> on Wednesdays from 10:30am to 12:30pm for San Francisco residents who live in participating SROs and have identification and a rental receipt.
-https://www.northbeachcitizens.org/community-food-pantry-1</p>
+{{ card(
+    'Glide Church',
+    'Glide Church on Ellis and Taylor offers daily free meals as well as breakfast every morning',
+    'https://www.glide.org/program/daily-free-meals/',
+) }}
 
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
+{{ card(
+    'Martin de Porres House of Hospitality',
+    'San Francisco’s free breakfast and lunch restaurant Martin de Porres House of Hospitality is still providing free meals to the community, though the dining room is closed so the organization is offering one daily bagged, mostly vegetarian or vegan meal to-go. ',
+    'https://martindeporres.org/',
+) }}
 
-<p>Glide Church on Ellis and Taylor offers daily free meals as well as breakfast every morning
-https://www.glide.org/program/daily-free-meals/</p>
+{{ card(
+    'SF-Marin Food Bank',
+    'the SF-Marin Food Bank has launched 19 weekly Pop-Up Pantries in various San Francisco neighborhoods. Visitors to the Pop-Up Pantries will be asked how many people are in their household and will receive an average of 30 pounds of food, made up of mostly fresh fruits and vegetables, plus rice, a protein such as eggs or frozen chicken and a canned item. No advance signup or identification is required.',
+    'https://www.sfmfoodbank.org/find-food/',
+) }}
 
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
+{{ card(
+    'Che Fico Family Meal',
+    'Families who have been severely impacted by COVID-19 can order a complimentary Che Fico Family Meal that feeds two to three people at Che Fico. Make an appointment online to be given a specific time slot to pick up the meal; you can indicate whether you’d like a vegetarian or omnivorous meal.',
+    'https://cheficofamilymeal.com/free-meal',
+) }}
 
-<p>San Francisco’s free breakfast and lunch restaurant <strong>Martin de Porres House of Hospitality</strong> is still providing free meals to the community, though the dining room is closed so the organization is offering one daily bagged, mostly vegetarian or vegan meal to-go. https://martindeporres.org/</p>
-
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
-
-<p>the <strong>SF-Marin Food Bank</strong> has launched 19 weekly <strong>Pop-Up Pantries</strong> in various San Francisco neighborhoods. Visitors to the Pop-Up Pantries will be asked how many people are in their household and will receive an average of 30 pounds of food, made up of mostly fresh fruits and vegetables, plus rice, a protein such as eggs or frozen chicken and a canned item. No advance signup or identification is required.
-https://www.sfmfoodbank.org/find-food/</p>
-
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
-
-<p>Families who have been severely impacted by COVID-19 can order a complimentary <strong>Che Fico Family Meal</strong> that feeds two to three people at <strong>Che Fico</strong>. Make an appointment online to be given a specific time slot to pick up the meal; you can indicate whether you’d like a vegetarian or omnivorous meal. https://cheficofamilymeal.com/free-meal</p>
-
-<img src="static/img/utils/divider_red_wide.png" class="img-fluid" style="width: 100%;" />
-
-<p>Tuesdays are now Pay It Forward Tuesdays at the two locations of pizza parlor <strong>Fiorella</strong>. Thanks to a partnership with the Bi-Rite Family of Businesses, 100 free meals are given away at each Fiorella location weekly to employed or recently laid off health care, grocery and restaurant workers who can provide proof or current or recent employment in these fields. Choose from pizza (margherita, mushroom, or pepperoni) or pasta (cacio e pepe or pomodoro); both are served with a seasonal Bi-Rite salad. Place an order for pickup at the Polk Street location by calling 415-829-7097⁠ or the Clement Street location by calling 415-340-3049.</p>
+{{ card(
+    'Pay It Forward Tuesdays',
+    'Tuesdays are now Pay It Forward Tuesdays at the two locations of pizza parlor Fiorella. Thanks to a partnership with the Bi-Rite Family of Businesses, 100 free meals are given away at each Fiorella location weekly to employed or recently laid off health care, grocery and restaurant workers who can provide proof or current or recent employment in these fields. Choose from pizza (margherita, mushroom, or pepperoni) or pasta (cacio e pepe or pomodoro); both are served with a seasonal Bi-Rite salad. Place an order for pickup at the Polk Street location by calling 415-829-7097⁠ or the Clement Street location by calling 415-340-3049.',
+    '',
+    'Polk Street location: 415-829-7097⁠, Clement Street location: 415-340-3049'
+) }}
 
 
 {% endblock %}
