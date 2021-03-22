@@ -3,7 +3,7 @@
 {% block title %} Page Not Found 404 Error {% endblock %}
 
 {% block content %}
-    <img src="static/img/myCityLogo.png" class="img-fluid" style="width: 50%; float: left;" />
+    <img src="{{ url_for('static', filename='img/myCityLogo.png') }}" class="img-fluid" style="width: 50%; float: left;" />
     <h1>404 Error :(</h1>
     <p>What you were looking for is just not there.<p>
     <a href="{{ url_for('index') }}">go somewhere nice</a>

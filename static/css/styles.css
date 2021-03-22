@@ -110,7 +110,7 @@ img {
 .card {
   margin-top: auto;
   margin-bottom: auto;
-  width: 75%;
+  /* width: 75%; */
 }
 .card-header {
   color: black;

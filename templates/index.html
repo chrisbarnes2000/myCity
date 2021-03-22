@@ -1,37 +1,46 @@
 <!-- templates/index.html -->
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-<h1 class="text-center mb-5"><b>Welcome to myCity!</b></h1>
+<h1 class="text-center mb-5">Welcome to myCity!</h1>
+
 <div class="row d-flex">
-    <img src="static/img/Helping.JPEG" class="img-fluid" style="width: 50%; float: left;" />
-    <div class="col float-left mt-5">
-        <h2><b>myCity</b> is an educational app that keeps you informed of:</h2>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Your legal rights & local laws over at <a href="{{ url_for('legal')}}"">Legal Help</a>
-            <br>Providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully detained.</li>
-            
-            <li class="list-group-item">Available support resources over at <a href="{{ url_for('resources') }}">Resources</a>
-            <br><bold>Government agencies, non-profits, and local businesses that help with things such as 
-            <br> <ul>
-                <li>Medical Info</li> 
-                <li>Addiction Recovery Resources</li>
-                <li>Access to Food</li>
-                <li>Housing, etc</li>
-            </li>
-        </bold>
+  <img src="{{ url_for('static', filename='img/Helping.JPEG') }}" class="img-fluid" style="width: 50%; float: left" />
+
+  <div class="col float-left mt-5">
+    <h2><strong>myCity</strong> is an educational app that keeps you informed of:</h2>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Your legal rights & local laws over at <a href="{{ url_for('legal')}}">Legal Help</a>
+        <br />
+        Providing you with lawfirms in your town, and resources to learn about in case you feel you become unlawfully
+        detained.
+      </li>
+
+      <li class="list-group-item">
+        Available support resources over at <a href="{{ url_for('resources') }}">Resources</a>
+        <br />
+        <strong>Government agencies, non-profits, and local businesses that help with things such as:</strong>
+        <br />
+        <ul>
+          <li>Medical Info</li>
+          <li>Addiction Recovery Resources</li>
+          <li>Access to Food</li>
+          <li>Housing, etc</li>
         </ul>
-            <li class="list-group-item">Later we plan to allow for Instantly submitting and track <a href="{{ url_for('benefits') }}">Benefits</a> applications via mobile app and mobile/user-friendly website. 
-            <br>(It’s the get calfresh for all benefits.)
-            </li> 
-            </ul>
-        </p>
+      </li>
 
-        <hr>
+      <li class="list-group-item">
+        Later we plan to allow for Instantly submitting and track
+        <a href="{{ url_for('benefits') }}">Benefits</a> applications via mobile app and mobile/user-friendly website.
+        <br />
+        (It’s the get calfresh for all benefits.)
+      </li>
+    </ul>
 
-        <p>For more information <a href="{{ url_for('creators') }}">about the Creators</a> please visit this link.</p>
-
-    </div>
+    <hr />
+    <p>For more information <a href="{{ url_for('creators') }}">about the Creators</a> please visit this link.</p>
+  </div>
 </div>
 
 {% endblock %}

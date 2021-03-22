@@ -43,6 +43,8 @@ An educational app to keep users informed of legal rights & local laws as well a
 - Other Docker [Commands](Docs/Docker-comands.md)
 - Learn the [Difference Between Clone and Fork](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/)
 - [emojipedia](https://emojipedia.org/)
+- [flask login](https://github.com/maxcountryman/flask-login)
+- [Database Setup](https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3#step-4-%E2%80%94-setting-up-the-database)
 - [`Final Project (Dockerizing Django)`](https://docs.google.com/document/d/1v2SHghK2yvD-XCEolZETN6q4UPtL1Sai_jRH1ROh21Q/edit#)
 - [`Spring Intensive 2.3 Proposal`](https://docs.google.com/document/d/1y7tC2fXuBbh0znymnoryIb7qaR-2ImK9_4I9IKvUKdA/edit?usp=sharing)
 

@@ -2,14 +2,17 @@
 {% from "partials/nav_macro.html" import nav_link with context %}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <img src="static/img/myCityLogo.png" class="img-fluid" style="width: 50px; height: 50px;" />
+    <img src="{{ url_for('static', filename='img/myCityLogo.png') }}" class="img-fluid" style="width: 50px; height: 50px;" />
     <a class="navbar-brand" href="{{ url_for('index') }}" style="margin-left: 1em;">myCity</a>
+
     <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
             <ul class="navbar-nav m-auto" id="myNav">
                 <li class="nav-item d-flex justify-content-end"><a class="nav-link" target="_blank" href="https://sf.gov/topics/coronavirus-covid-19">
                     SF Pandemic Info&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a>
@@ -19,7 +22,14 @@
                 {{ nav_link('legal', 'Legal') }}
                 {{ nav_link('health', 'Health') }}
                 {{ nav_link('shelters', 'Shelters') }}
+
+                {% if current_user.is_authenticated %}
+                    <li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{{ url_for('settings') }}">
+                        Hi {{ current_user.id }}!
+                    </a></li>
+                {% endif %}
             </ul>
+
             <form class="form-inline my-2 my-lg-0 float-right">
                 <div class="input-group">
                 <div class="input-group-prepend">
@@ -38,9 +48,10 @@
                         <a href="{{ url_for('health') }}">Medical Help</a>
                         <a href="{{ url_for('shelters') }}">Local Shelters</a>
                     </div>
-                <div style="display:none;" class="dropdown-header dropdown_empty">No entry found</div>
-            </div>
+                    <div style="display:none;" class="dropdown-header dropdown_empty">No entry found</div>
+                </div>
             </form>
+
         </div>  <!-- end nav bar colapse -->
     </div>   <!-- end containter -->
 </nav>

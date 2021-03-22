@@ -5,14 +5,14 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-5 pt-5">
-        <img src="static/img/creators/creator_bg.png" alt="Creator Back ground" class="img-fluid" style="width: 100%; float: left;" />
+    <div class="col-4 m-auto">
+        <img src="{{ url_for('static', filename='img/creators/creator_bg.png') }}" alt="Creator Back ground" class="img-fluid" style="width: 100%; float: left;" />
     </div>
-    <div class="col-7">
+    <div class="col-8">
         <div class="card">
             <div class="row no-gutters">
                 <div class="col-auto mt-3">
-                    <img src="static/img/creators/Chris.png" class="card-image img-fluid" alt="Creator">
+                    <img src="{{ url_for('static', filename='img/creators/Chris.png') }}" class="card-image img-fluid" alt="Creator">
                 </div>
                 <div class="col">
                     <div class="card-block px-2">
@@ -31,7 +31,7 @@
         <div class="card">
             <div class="row no-gutters">
                 <div class="col-auto mt-3">
-                    <img src="static/img/creators/Gideon.png" class="card-image img-fluid" alt="Creator">
+                    <img src="{{ url_for('static', filename='img/creators/Gideon.png') }}" class="card-image img-fluid" alt="Creator">
                 </div>
                 <div class="col">
                     <div class="card-block px-2">
@@ -46,7 +46,7 @@
         <div class="card">
             <div class="row no-gutters">
                 <div class="col-auto mt-3">
-                    <img src="static/img/creators/Ben.jpeg" class="card-image img-fluid" alt="Creator">
+                    <img src="{{ url_for('static', filename='img/creators/Ben.jpeg') }}" class="card-image img-fluid" alt="Creator">
                 </div>
                 <div class="col">
                     <div class="card-block px-2">
@@ -61,7 +61,7 @@
         <div class="card">
             <div class="row no-gutters">
                 <div class="col-auto mt-3">
-                    <img src="static/img/creators/Henry.jpeg" class="card-image img-fluid" alt="Creator">
+                    <img src="{{ url_for('static', filename='img/creators/Henry.jpeg/') }}" class="card-image img-fluid" alt="Creator">
                 </div>
                 <div class="col">
                     <div class="card-block px-2">

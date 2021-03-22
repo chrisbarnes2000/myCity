@@ -1,9 +1,9 @@
 {% macro under_construction() %} 
-<img src="static/img/utils/construction-strip.gif" class="img-fluid" style="width: 100%;" />
+<img src="{{ url_for('static', filename='img/utils/construction-strip.gif') }}" class="img-fluid" style="width: 100%;" />
 <div>
-    <img src="static/img/utils/under-construction.gif" class="img-fluid" style="width: 25%; float: left;" />
-    <img src="static/img/utils/under-construction-sign.gif" class="img-fluid mt-5 pt-4" style="width: 50%" />
-    <img src="static/img/utils/under-construction.gif" class="img-fluid" style="width: 25%; float: right;" />
+    <img src="{{ url_for('static', filename='img/utils/under-construction.gif') }}" class="img-fluid" style="width: 25%; float: left;" />
+    <img src="{{ url_for('static', filename='img/utils/under-construction-sign.gif') }}" class="img-fluid mt-5 pt-4" style="width: 50%" />
+    <img src="{{ url_for('static', filename='img/utils/under-construction.gif') }}" class="img-fluid" style="width: 25%; float: right;" />
 </div>
-<img src="static/img/utils/construction-strip.gif" class="img-fluid mb-5" style="width: 100%;" />
+<img src="{{ url_for('static', filename='img/utils/construction-strip.gif') }}" class="img-fluid mb-5" style="width: 100%;" />
  {% endmacro %}
