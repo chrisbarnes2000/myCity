@@ -66,17 +66,18 @@ def get_user(email):
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly
-    return render_template('404.html'), 404
+    return render_template('errors/404.html'), 404
 
 
 @app.errorhandler(500)
 def internal_server_issue_page(e):
     # note that we set the 500 status explicitly
-    return render_template('500.html'), 500
+    return render_template('errors/500.html'), 500
 
 
 @login_manager.unauthorized_handler
 def unauthorized_handler():
+    # return render_template('auth/unauthorized')
     return 'Unauthorized'
 
 
@@ -124,7 +125,7 @@ def request_loader(request):
 # \--------------------------------------------/ #
 
 
-@app.route("/send")
+# @app.route("/send")
 def send_mail(subject, html, recipients):
     msg = Message(subject, recipients, html)
     mail.send(msg)
@@ -135,12 +136,51 @@ def send_mail(subject, html, recipients):
 # |--------------------Routes------------------| #
 # \--------------------------------------------/ #
 
+@app.route('/register', methods=('GET', 'POST'))
+def register():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+
+        if not email or not password:
+            flash('Eail & Password are required!')
+        else:
+            conn = get_db_connection()
+            user = conn.execute('INSERT INTO users (email, password, first_name, last_name) VALUES (?, ?, ?, ?)',
+                                (email, hashing.hash_value(password, salt='abcd'), first_name, last_name))
+            conn.commit()
+            conn.close()
+
+            send_mail(
+                subject="New User | " + email,
+                html="<p> Welcome The New User </p>",
+                recipients=["Chris.Barnes.2000@me.com"]
+            )
+
+            login_user(User(email))
+            return redirect(url_for('index'))
+
+    # return render_template('auth/register')
+    return '''
+               <form action='register' method='POST'>
+                <input type='email' name='email' id='email' placeholder='email'/>
+                <input type='password' name='password' id='password' placeholder='password'/>
+                <input type='text' name='first_name' id='first_name' placeholder='first_name'/>
+                <input type='text' name='last_name' id='last_name' placeholder='last_name'/>
+                <input type='submit' name='submit'/>
+               </form>
+               '''
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
+        # return render_template('auth/login')
         return '''
                <form action='login' method='POST'>
-                <input type='text' name='email' id='email' placeholder='email'/>
+                <input type='email' name='email' id='email' placeholder='email'/>
                 <input type='password' name='password' id='password' placeholder='password'/>
                 <input type='submit' name='submit'/>
                </form>
@@ -149,7 +189,9 @@ def login():
     email = request.form['email']
     password = request.form['password']
     h = hashing.hash_value(password, salt='abcd')
-    if hashing.check_value(h, password, salt='abcd'):
+
+    user = get_user(email)
+    if user is not None and hashing.check_value(h, user['password'], salt='abcd'):
         login_user(User(email))
         return redirect(url_for('settings'))
 
@@ -242,6 +284,7 @@ def shelters():
 @app.route("/settings")
 @login_required
 def settings():
+    # return render_template('auth/settings.html')
     return 'Logged in as: ' + current_user.id
 
 

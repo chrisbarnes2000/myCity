@@ -33,13 +33,9 @@ $ pip install --upgrade pip && pip install -r requirements.txt
 
 Run Locally, by Building the image to run the container on docker
 
-- Build the image:
-
-   `docker build -t flask-image .`
-
-- Build the container:
-
-   `docker run -p 5000:5000 --rm --name flask-container flask-image`
+```zsh
+$ Flask Run
+```
 
 Test it out at [http://localhost:5000](http://localhost:5000).
 
