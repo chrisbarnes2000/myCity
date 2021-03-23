@@ -1,8 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, abort
 from flask_login import LoginManager, UserMixin, login_required, current_user, login_user, logout_user
+from flask_mail import Mail, Message
+from os import environ, path
+from dotenv import load_dotenv
 import sqlite3
-from werkzeug.exceptions import abort
 
+basedir = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(basedir, '.env'))
 
 # /--------------------------------------------\ #
 # |----------------Setup/Init------------------| #
@@ -11,10 +15,22 @@ from werkzeug.exceptions import abort
 
 # Setup Flask and login
 app = Flask(__name__)
-app.secret_key = 'super secret string'  # Change this!
+app.config.update(
+    SECRET_KEY=environ.get('SECRET_KEY'),
+    FLASK_ENV=environ.get('FLASK_ENV'),
+    DEBUG=environ.get('DEBUG'),
 
-login_manager = LoginManager()
-login_manager.init_app(app)
+    MAIL_SERVER=environ.get('EMAIL_SERVER'),
+    MAIL_PORT=environ.get('EMAIL_PORT'),
+    MAIL_DEFAULT_SENDER=environ.get('EMAIL_DEFAULT_SENDER'),
+    MAIL_USERNAME=environ.get('EMAIL_USERNAME'),
+    MAIL_PASSWORD=environ.get('EMAIL_PASSWORD'),
+    MAIL_USE_TLS=environ.get('EMAIL_USE_TLS'),
+    MAIL_USE_SSL=environ.get('EMAIL_USE_SSL'),
+)
+
+login_manager = LoginManager(app)
+mail = Mail(app)
 
 # Our mock database.
 users = {'foo@bar.tld': {'password': 'secret'}}
@@ -45,7 +61,7 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-@app.errorhandler(404)
+@app.errorhandler(500)
 def internal_server_issue_page(e):
     # note that we set the 500 status explicitly
     return render_template('500.html'), 500
@@ -92,23 +108,17 @@ def request_loader(request):
     return user
 
 
-
 # /--------------------------------------------\ #
-# |--------------Protected Routes--------------| #
+# |---------------------Mail-------------------| #
 # \--------------------------------------------/ #
 
-@app.route("/logout")
-@login_required
-def logout():
-    logout_user()
-    return redirect(index)
 
 
-@app.route("/settings")
-@login_required
-def settings():
-    return 'Logged in as: ' + current_user.id
-
+@app.route("/send")
+def send_mail(subject, html, recipients):
+    msg = Message(subject, recipients, html)
+    mail.send(msg)
+    return 'Mail Sent'
 
 
 # /--------------------------------------------\ #
@@ -209,11 +219,29 @@ def shelters():
 
 
 # /--------------------------------------------\ #
+# |--------------Protected Routes--------------| #
+# \--------------------------------------------/ #
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(index)
+
+
+@app.route("/settings")
+@login_required
+def settings():
+    return 'Logged in as: ' + current_user.id
+
+
+# /--------------------------------------------\ #
 # |-------------Blog/Post Routes---------------| #
 # \--------------------------------------------/ #
 
 
 @app.route('/blog')
+@login_required
 def blog():
     """Show the Index page."""
     conn = get_db_connection()
@@ -223,12 +251,14 @@ def blog():
 
 
 @app.route('/blog/<int:id>')
+@login_required
 def post(id):
     post = get_post(id)
     return render_template('blog/post.html', post=post)
 
 
 @app.route('/blog/create', methods=('GET', 'POST'))
+@login_required
 def create():
     if request.method == 'POST':
         title = request.form['title']
@@ -238,16 +268,24 @@ def create():
             flash('Title is required!')
         else:
             conn = get_db_connection()
-            conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
-                         (title, content))
+            post = conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
+                                (title, content))
             conn.commit()
             conn.close()
+
+            send_mail(
+                subject="New Post | " + title,
+                html=render_template('blog/post.html', post=post),
+                recipients=["Chris.Barnes.2000@me.com"]
+            )
+
             return redirect(url_for('blog'))
 
     return render_template('blog/create.html')
 
 
 @app.route('/blog/<int:id>/edit', methods=('GET', 'POST'))
+@login_required
 def edit(id):
     post = get_post(id)
 
@@ -259,17 +297,25 @@ def edit(id):
             flash('Title is required!')
         else:
             conn = get_db_connection()
-            conn.execute('UPDATE posts SET title = ?, content = ?'
-                         ' WHERE id = ?',
-                         (title, content, id))
+            post = conn.execute('UPDATE posts SET title = ?, content = ?'
+                                ' WHERE id = ?',
+                                (title, content, id))
             conn.commit()
             conn.close()
+
+            send_mail(
+                subject = "Post | " + title + " | Edited",
+                html = render_template('blog/post.html', post=post),
+                recipients = ["Chris.Barnes.2000@me.com"]
+            )
+
             return redirect(url_for('blog'))
 
     return render_template('blog/edit.html', post=post)
 
 
 @app.route('/blog/<int:id>/delete', methods=('POST',))
+@login_required
 def delete(id):
     post = get_post(id)
     conn = get_db_connection()
@@ -287,4 +333,4 @@ def delete(id):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True, load_dotenv=False)
+    app.run(host='0.0.0.0', port=5000, debug=environ.get('DEBUG'), load_dotenv=True)
