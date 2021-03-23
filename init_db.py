@@ -16,5 +16,9 @@ cur.execute("INSERT INTO posts (title, content) VALUES (?, ?)",
             ('Second Post', 'Content for the second post')
             )
 
+cur.execute("INSERT INTO users (email, password, first_name, last_name) VALUES (?, ?, ?, ?)",
+            ('Chris.Barnes.2000@me.com', 'SUPER_COOL_PASS', 'Chris', 'Barnes')
+            )
+
 connection.commit()
 connection.close()

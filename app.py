@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, abort
 from flask_login import LoginManager, UserMixin, login_required, current_user, login_user, logout_user
 from flask_mail import Mail, Message
-from os import environ, path
+from flask_hashing import Hashing
 from dotenv import load_dotenv
+from os import environ, path
 import sqlite3
 
 basedir = path.abspath(path.dirname(__file__))
@@ -30,10 +31,8 @@ app.config.update(
 )
 
 login_manager = LoginManager(app)
+hashing = Hashing(app)
 mail = Mail(app)
-
-# Our mock database.
-users = {'foo@bar.tld': {'password': 'secret'}}
 
 
 def get_db_connection():
@@ -51,9 +50,18 @@ def get_post(post_id):
         abort(404)
     return post
 
+
+def get_user(email):
+    conn = get_db_connection()
+    user = conn.execute('SELECT * FROM users WHERE email = ?',
+                        (email,)).fetchone()
+    conn.close()
+    return user
+
 # /--------------------------------------------\ #
 # |------------------Handlers------------------| #
 # \--------------------------------------------/ #
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -72,38 +80,41 @@ def unauthorized_handler():
     return 'Unauthorized'
 
 
-
 # /--------------------------------------------\ #
 # |-------------------Mixines------------------| #
 # \--------------------------------------------/ #
 
 class User(UserMixin):
+    def __init__(self, email, first_name=None, last_name=None):
+        self.id = email
+        self.first_name = first_name
+        self.last_name = last_name
+
     def get(user_id):
-        return 'User'
+        return self
 
 
 @login_manager.user_loader
 def user_loader(email):
-    if email not in users:
+    if get_user(email) is None:
         return
-
-    user = User()
-    user.id = email
-    return user
+    return User(email)
 
 
 @login_manager.request_loader
 def request_loader(request):
     email = request.form.get('email')
-    if email not in users:
+    password = request.form.get('password')
+
+    if get_user(email) is None:
         return
 
-    user = User()
-    user.id = email
+    user = User(email)
 
     # DO NOT ever store passwords in plaintext and always compare password
     # hashes using constant-time comparison!
-    user.is_authenticated = request.form['password'] == users[email]['password']
+    h = hashing.hash_value(password, salt='abcd')
+    user.is_authenticated = hashing.check_value(h, password, salt='abcd')
 
     return user
 
@@ -111,7 +122,6 @@ def request_loader(request):
 # /--------------------------------------------\ #
 # |---------------------Mail-------------------| #
 # \--------------------------------------------/ #
-
 
 
 @app.route("/send")
@@ -137,13 +147,19 @@ def login():
                '''
 
     email = request.form['email']
-    if request.form['password'] == users[email]['password']:
-        user = User()
-        user.id = email
-        login_user(user)
-        return redirect(url_for('protected'))
+    password = request.form['password']
+    h = hashing.hash_value(password, salt='abcd')
+    if hashing.check_value(h, password, salt='abcd'):
+        login_user(User(email))
+        return redirect(url_for('settings'))
 
     return 'Bad login'
+
+
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect('index')
 
 
 # @app.route('/login', methods=['GET', 'POST'])
@@ -222,12 +238,6 @@ def shelters():
 # |--------------Protected Routes--------------| #
 # \--------------------------------------------/ #
 
-@app.route("/logout")
-@login_required
-def logout():
-    logout_user()
-    return redirect(index)
-
 
 @app.route("/settings")
 @login_required
@@ -304,9 +314,9 @@ def edit(id):
             conn.close()
 
             send_mail(
-                subject = "Post | " + title + " | Edited",
-                html = render_template('blog/post.html', post=post),
-                recipients = ["Chris.Barnes.2000@me.com"]
+                subject="Post | " + title + " | Edited",
+                html=render_template('blog/post.html', post=post),
+                recipients=["Chris.Barnes.2000@me.com"]
             )
 
             return redirect(url_for('blog'))
@@ -326,11 +336,10 @@ def delete(id):
     return redirect(url_for('blog'))
 
 
-
 # /--------------------------------------------\ #
 # |---------------Entrypoint/Run---------------| #
 # \--------------------------------------------/ #
 
-
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=environ.get('DEBUG'), load_dotenv=True)
+    app.run(host='0.0.0.0', port=5000,
+            debug=environ.get('DEBUG'), load_dotenv=True)
